@@ -4,9 +4,6 @@
 title = "Guide for writing markdown slides"
 description = "A Hugo theme for creating Reveal.js presentations"
 outputs = ["Reveal"]
-aliases = [
-    "/guide/"
-]
 
 +++
 
@@ -189,7 +186,6 @@ Column 2
 
 ---
 
-{{< slide background-image="https://upload.wikimedia.org/wikipedia/commons/6/6c/Scavolino_innevata.jpg" >}}
 
 # Large images as background
 ## (May affect printing)
@@ -197,7 +193,6 @@ Column 2
 ---
 
 
-{{< slide background-video="https://github.com/DanySK/slides-2024-acsos-imageonomics/raw/master/content/nonnadir.mkv" background-video-loop="true" background-video-muted="true" background-opacity="0.95">}}
 
 # Video background
 
@@ -378,8 +373,3 @@ gitGraph
 {{% qrcode data="https://www.google.com" %}}
 
 ---
-
-# Import shared slides
-
-<!-- write-here "shared-slides/devops/devops-intro.md" -->
-<!-- end-write -->
