@@ -29,8 +29,8 @@
 
 $backgroundColor: #EFF1ED;
 
-$mainColor: #222;
-$headingColor: #222;
+$mainColor: #095aa6;
+$headingColor: #4999e4;
 
 $mainFontSize: 2em;
 // $mainFont: 'Roboto', sans-serif;
@@ -52,7 +52,7 @@ $selectionBackgroundColor: lighten( $linkColor, 25% );
 $detailBackgroundColor: #dae5e9;
 $logo: url("../example-background-neg.svg");
 
-$heading1Size: 2.5em;
+$heading1Size: 2.2em;
 $heading2Size: 1.6em;
 $heading3Size: 1.3em;
 $heading4Size: 1.0em;
@@ -62,11 +62,14 @@ $heading4Size: 1.0em;
 section.has-light-background {
 	$detailBackgroundColor: #bd2b0b !global;
 	$logo: url("../example-background.svg") !global;
-	&, h1, h3, h4, h5, h6 {
+	&, h1, h4, h5, h6 {
 		color: #095aa6;
 	}
 	h2 {
 		color: #4999e4;
+	}
+	h3 {
+		color: #0084ff;
 	}
 }
 
@@ -288,11 +291,12 @@ kbd {
   .reveal div.col {
 	// draw a red border
 	// border: 1px solid red;
-	text-align: left;
-	border: .02em dashed $detailBackgroundColor;
+	text-align: center;
+	border: .1em dashed $linkColor;
 	border-style: none;
 	border-radius: 1em;
-	padding: 0.5em;
+	padding: 0.8em;
+	margin: 0.2em;
 }
 
 .reveal div.container {
