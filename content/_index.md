@@ -24,7 +24,7 @@ and
 
 ---
 
-{{< multicol >}}
+{{< multicol>}}
 
 {{< col >}}
 {{% fragment %}}
@@ -73,7 +73,7 @@ and
 {{</ col >}}
 
 {{< col >}}
-<div class="r-stack fragment fade-out">
+<div class="r-stack">
   <img
     class="fragment current-visible"
     data-fragment-index="0"
@@ -104,50 +104,30 @@ and
   />
   <img
     class="fragment"
-    data-fragment-index="4"
+    data-fragment-index="4,5,6,7"
     src="./images/treeWithResourcesandSuccess.pdf"
     width="600"
     height="500"
   />
 </div>
-
-
 {{</ col >}}
-
 {{</ multicol >}}
 
+---
 
+# Possible Solution?
 
-
-<!-- <div class="r-stack">
-  <img
-    class="fragment fade-out"
-    data-fragment-index="0"
-    src="https://picsum.photos/450/300"
-    width="450"
-    height="300"
-  />
-  <img
-    class="fragment current-visible"
-    data-fragment-index="0"
-    src="https://picsum.photos/300/450"
-    width="300"
-    height="450"
-  />
-  <img
-    class="fragment"
-    src="https://picsum.photos/400/400"
-    width="400"
-    height="400"
-  />
-</div> -->
-<!-- what it is -->
-<!-- limitations -->
-<!-- how we want to address them -->
+An implementation as a **Field-based** computation with the **Aggregate Computing** paradigm!
 
 ---
 
 # What is Aggregate Computing?
+
+<img src="./images/acDevices.pdf" width=70%>
+
+A macro-programming approach that defines the **collective behavior** of heterogeneous devices in a **self-organizing system**.
+
+Based on Field Calculus abstractions, it operates in terms of *field*: a distributed data structure.
 
 --- 
 
