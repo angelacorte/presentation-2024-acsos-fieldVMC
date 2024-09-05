@@ -53,7 +53,7 @@ and
 # What do they have in common?
 {{%/ fragment %}}
 
-{{< frag c="## They all have a runtime generated hierarchical structure" >}}
+{{< frag c="## A runtime generated hierarchical structure" >}}
 
 ---
 
@@ -61,16 +61,19 @@ and
 
 {{< multicol >}}
 
-{{< col >}}
+{{< col class="col-8">}}
 <p class = "fragment" data-fragment-index="0">The <b>VMC</b> is a model for the growth of artificial structures over time.</p>
 <p class = "fragment" data-fragment-index="1">It models tree-like structures, in which every node can get information from the environment.</p>
 <p class = "fragment" data-fragment-index="2">The leaves of the tree start by sending the amount of <b>success</b> they sense to the root.</p>
 <p class = "fragment" data-fragment-index="3">The root then sends back an amount of <b>resources</b> based on the success received from the leaves, regulating the tickness of their connections.</p>
-<h3 class = "fragment" data-fragment-index="4">But it has some limitations</h3>
+<h3 class = "fragment" data-fragment-index="4"><i class="fa-solid fa-arrow-right"></i> But it has some limitations</h3>
+<p class = "fragment" data-fragment-index="5"><i class="fa-solid fa-triangle-exclamation"></i> VMC assumes that organizations have <b>only</b> a tree structure.</p>
+<p class = "fragment" data-fragment-index="6"><i class="fa-solid fa-triangle-exclamation"></i>VMC assumes strict <b>synchronous operations</b>.</p>
+<p class = "fragment" data-fragment-index="7"><i class="fa-solid fa-angles-right"></i>Restricting the model usefulness, leading to <b>abstraction gaps</b>.</p>
 {{</ col >}}
 
 {{< col >}}
-<div class="r-stack">
+<div class="r-stack fragment fade-out">
   <img
     class="fragment current-visible"
     data-fragment-index="0"
@@ -99,8 +102,15 @@ and
     width="600"
     height="500"
   />
-<p class = "fragment" data-fragment-index="5">VMC assumes that organizations have <b>only</b> a tree structure.</p>
+  <img
+    class="fragment"
+    data-fragment-index="4"
+    src="./images/treeWithResourcesandSuccess.pdf"
+    width="600"
+    height="500"
+  />
 </div>
+
 
 {{</ col >}}
 
