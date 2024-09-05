@@ -69,7 +69,7 @@ and
 <h3 class = "fragment" data-fragment-index="4"><i class="fa-solid fa-arrow-right"></i> But it has some limitations</h3>
 <p class = "fragment" data-fragment-index="5"><i class="fa-solid fa-triangle-exclamation"></i> VMC assumes that organizations have <b>only</b> a tree structure.</p>
 <p class = "fragment" data-fragment-index="6"><i class="fa-solid fa-triangle-exclamation"></i>VMC assumes strict <b>synchronous operations</b>.</p>
-<p class = "fragment" data-fragment-index="7"><i class="fa-solid fa-angles-right"></i>Restricting the model usefulness, leading to <b>abstraction gaps</b>.</p>
+<p class = "fragment" data-fragment-index="7"><i class="fa-solid fa-angles-right"></i>Restricts the model usefulness, leading to <b>abstraction gaps</b>.</p>
 {{</ col >}}
 
 {{< col >}}
