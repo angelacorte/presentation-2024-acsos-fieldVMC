@@ -155,8 +155,32 @@ validation made by qualitative approach
 ---
 
 # Experiments
+{{<multicol>}}
 
-gif varie con fragment
+{{<col>}}
+<img src="images/oneroot.gif" alt="One root sequence">
+{{</col>}}
+
+{{<col>}}
+<img src="images/cutting.gif" alt="One root sequence">
+{{</col>}}
+
+{{<col>}}
+<img src="images/graft.gif" alt="One root sequence">
+{{</col>}}
+
+{{<col>}}
+<img src="images/graftWithSpawning.gif" alt="One root sequence">
+{{</col>}}
+
+{{<col>}}
+<img src="images/graftWithMoreLeaders.gif" alt="One root sequence">
+{{</col>}}
+
+
+
+{{</multicol>}}
+TODO  fragment
 
 ---
 
