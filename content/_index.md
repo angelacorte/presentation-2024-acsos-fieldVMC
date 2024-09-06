@@ -77,37 +77,37 @@ and
   <img
     class="fragment current-visible"
     data-fragment-index="0"
-    src="./images/tree.pdf"
-    width="600"
-    height="500"
+    src="images/tree.svg"
+    width="180%"
+    height="170%"
   />
   <img
     class="fragment current-visible"
     data-fragment-index="1"
-    src="./images/treeWithSensing.pdf"
-    width="600"
-    height="500"
+    src="images/treeWithSensing.svg"
+    width="180%"
+    height="170%"
   />
   <img
     class="fragment current-visible"
     data-fragment-index="2"
-    src="./images/treeWithSucc.pdf"
-    width="600"
-    height="500"
+    src="images/treeWithSuccess.svg"
+    width="180%"
+    height="170%"
   />
   <img
     class="fragment current-visible"
     data-fragment-index="3"
-    src="./images/treeWithRes.pdf"
-    width="600"
-    height="500"
+    src="images/treeWithResources.svg"
+    width="180%"
+    height="170%"
   />
   <img
     class="fragment"
-    data-fragment-index="4,5,6,7"
-    src="./images/treeWithResourcesandSuccess.pdf"
-    width="600"
-    height="500"
+    data-fragment-index="4"
+    src="images/treeWithResourcesandSuccess.svg"
+    width="180%"
+    height="170%"
   />
 </div>
 {{</ col >}}
@@ -115,7 +115,7 @@ and
 
 ---
 
-# Possible Solution?
+# A Possible Solution?
 
 An implementation as a **Field-based** computation with the **Aggregate Computing** paradigm!
 
