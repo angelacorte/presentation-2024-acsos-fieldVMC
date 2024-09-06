@@ -5,3 +5,4 @@ _gen/
 *build.lock
 **.DS_Store
 .idea/
+**INK*.svg
