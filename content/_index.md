@@ -8,7 +8,7 @@ outputs = ["Reveal"]
 
 # An Aggregate Vascular Morphogenesis Controller for Engingeered Self-Organising Spatial Structures
 
-[Angela Cortecchia](mailto:angela.cortecchia@unibo.it) <!--<i class="fa-solid fa-computer"></i>-->,
+[**Angela Cortecchia**](mailto:angela.cortecchia@unibo.it) <!--<i class="fa-solid fa-computer"></i>-->,
 [Danilo Pianini](mailto:danilo.pianini@unibo.it) <!--<i class="fa-solid fa-computer"></i>-->,
 [Giovanni Ciatto](mailto:giovanni.ciatto@unibo.it) <!--<i class="fa-solid fa-computer"></i>-->,
 and
@@ -63,7 +63,7 @@ and
 
 {{< col class="col-8">}}
 <p class = "fragment" data-fragment-index="0">The <b>VMC</b> is a model for the growth of artificial structures over time.</p>
-<p class = "fragment" data-fragment-index="1">It models tree-like structures, in which every node can get information from the environment.</p>
+<p class = "fragment" data-fragment-index="1">It models tree-like structures, in which every node can <b>get information from the environment</b>.</p>
 <p class = "fragment" data-fragment-index="2">The leaves of the tree start by sending the amount of <b>success</b> they sense to the root.</p>
 <p class = "fragment" data-fragment-index="3">The root then sends back an amount of <b>resources</b> based on the success received from the leaves, regulating the tickness of their connections.</p>
 <h3 class = "fragment" data-fragment-index="4"><i class="fa-solid fa-arrow-right"></i> But it has some limitations</h3>
@@ -245,35 +245,80 @@ validation made by qualitative approach
 ## distinctive features 
 (multiple leaders, growth and shrink, merge and split)
 
+--- 
+
+# Self-Construction
+
+{{< multicol >}}
+{{< col >}}
+<img src="images/oneRootWithIndex.gif" alt="One root sequence">
+{{</ col >}}
+
+{{% col %}}
+Some text here
+{{%/ col %}}
+
+{{</ multicol >}}
+
 ---
 
-# Experiments
-{{<multicol>}}
+# Self-Repairing
 
-{{<col>}}
-<img src="images/oneroot.gif" alt="One root sequence">
-{{</col>}}
+{{< multicol >}}
+{{< col >}}
+<img src="images/cuttingWithIndex.gif" alt="One root sequence">
+{{</ col >}}
 
-{{<col>}}
-<img src="images/cutting.gif" alt="One root sequence">
-{{</col>}}
+{{% col %}}
+Some text here
+{{%/ col %}}
 
-{{<col>}}
-<img src="images/graft.gif" alt="One root sequence">
-{{</col>}}
+{{</ multicol >}}
 
-{{<col>}}
-<img src="images/graftWithSpawning.gif" alt="One root sequence">
-{{</col>}}
+---
 
-{{<col>}}
-<img src="images/graftWithMoreLeaders.gif" alt="One root sequence">
-{{</col>}}
+# Self-Integration
 
+{{< multicol >}}
+{{< col >}}
+<img src="images/graftWithIndex.gif" alt="One root sequence">
+{{</ col >}}
 
+{{% col %}}
+Some text here
+{{%/ col %}}
 
-{{</multicol>}}
-TODO  fragment
+{{</ multicol >}}
+
+---
+
+# Self-Optimization
+
+{{< multicol >}}
+{{< col >}}
+<img src="images/graftWithSpawningWithIndex.gif" alt="One root sequence">
+{{</ col >}}
+
+{{% col %}}
+fixa la gif che ha le immagini sbagliate
+{{%/ col %}}
+
+{{</ multicol >}}
+
+---
+
+# Self-Segmentation
+
+{{< multicol >}}
+{{< col >}}
+<img src="images/graftWithMoreLeadersWithIndex.gif" alt="One root sequence">
+{{</ col >}}
+
+{{% col %}}
+Some text here
+{{%/ col %}}
+
+{{</ multicol >}}
 
 ---
 
