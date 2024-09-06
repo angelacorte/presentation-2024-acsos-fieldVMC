@@ -3,8 +3,8 @@
 
 <svg
    width="111.7718mm"
-   height="146.18401mm"
-   viewBox="0 0 111.7718 146.18401"
+   height="167.18401mm"
+   viewBox="0 0 111.7718 167.18401"
    version="1.1"
    id="svg1"
    xml:space="preserve"
@@ -29,11 +29,11 @@
      inkscape:document-units="mm"
      inkscape:zoom="1.1702298"
      inkscape:cx="138.43435"
-     inkscape:cy="326.00434"
-     inkscape:window-width="2560"
-     inkscape:window-height="1440"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:cy="325.57708"
+     inkscape:window-width="2320"
+     inkscape:window-height="1387"
+     inkscape:window-x="244"
+     inkscape:window-y="25"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg1"
      showguides="false" /><defs
@@ -154,7 +154,7 @@
        x2="204.15234"
        y2="136.10399" /></defs><g
      id="layer1"
-     transform="matrix(1,0,0,-1,-64.587842,216.45219)"
+     transform="matrix(1,0,0,-1,-64.587842,238.14816)"
      style="display:inline"><path
        style="fill:#60f9ff;fill-opacity:1;fill-rule:evenodd;stroke:#563813;stroke-width:2.3545;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
        d="M 111.9735,22.270869 53.255071,81.862228"
@@ -307,16 +307,16 @@
        style="display:none;fill:#ff8c7f;fill-opacity:1;fill-rule:evenodd;stroke:#2660a4;stroke-width:1.377;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#RoundedArrow)"
        d="m 140.83842,229.60859 1.12562,-10.6197"
        id="path217" /><path
-       style="display:none;fill:#ff8c7f;fill-opacity:1;fill-rule:evenodd;stroke:#2660a4;stroke-width:1.377;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#RoundedArrow)"
+       style="display:inline;fill:#ff8c7f;fill-opacity:1;fill-rule:evenodd;stroke:#2660a4;stroke-width:1.377;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#RoundedArrow)"
        d="m 103.16728,229.61643 -1.0084,-10.63146"
        id="path218" /><path
-       style="display:none;fill:#ff8c7f;fill-opacity:1;fill-rule:evenodd;stroke:#2660a4;stroke-width:1.377;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#RoundedArrow)"
+       style="display:inline;fill:#ff8c7f;fill-opacity:1;fill-rule:evenodd;stroke:#2660a4;stroke-width:1.377;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#RoundedArrow)"
        d="m 93.125742,229.60859 1.12562,-10.6197"
        id="path219" /></g><ellipse
      style="display:inline;fill:none;fill-rule:evenodd;stroke:#ff8205;stroke-width:3.477;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:3.477, 6.95399"
      id="path3"
      cx="98.013916"
-     cy="55.925087"
+     cy="77.620941"
      rx="14.455276"
      ry="14.865936" /><ellipse
      style="display:none;fill:none;fill-rule:evenodd;stroke:#ff8205;stroke-width:4.08856;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:4.08856, 8.17712"
@@ -335,13 +335,13 @@
      style="display:inline;fill:none;fill-rule:evenodd;stroke:#ff8205;stroke-width:3.477;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:3.477, 6.95399"
      id="ellipse5"
      cx="48.386482"
-     cy="119.22285"
+     cy="140.9185"
      rx="14.455276"
      ry="14.865936" /><ellipse
      style="display:inline;fill:none;fill-rule:evenodd;stroke:#ff8205;stroke-width:3.477;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:3.477, 6.95399"
      id="ellipse6"
      cx="59.737305"
-     cy="55.925087"
+     cy="77.620941"
      rx="14.455276"
      ry="14.865936" /><ellipse
      style="display:none;fill:none;fill-rule:evenodd;stroke:#ff8205;stroke-width:4.08856;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:4.08856, 8.17712"
@@ -357,4 +357,10 @@
      rx="11.609567"
      cy="69.49791"
      cx="80.752213"
-     transform="matrix(0.89589799,0.44425982,-0.26213453,0.96503134,0,0)" /></svg>
+     transform="matrix(0.89589799,0.44425982,-0.26213453,0.96503134,0,0)" /><ellipse
+     style="display:inline;fill:none;fill-rule:evenodd;stroke:#ff8205;stroke-width:3.477;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:3.477, 6.95399"
+     id="ellipse1"
+     cx="33.847126"
+     cy="16.280382"
+     rx="14.455276"
+     ry="14.865936" /></svg>
