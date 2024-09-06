@@ -53,7 +53,7 @@ and
 # What do they have in common?
 {{%/ fragment %}}
 
-{{< frag c="## A runtime generated hierarchical structure" >}}
+{{< frag c="## A runtime-generated hierarchical structure" >}}
 
 ---
 
@@ -69,7 +69,7 @@ and
 <h3 class = "fragment" data-fragment-index="4"><i class="fa-solid fa-arrow-right"></i> But it has some limitations</h3>
 <p class = "fragment" data-fragment-index="5"><i class="fa-solid fa-triangle-exclamation"></i> VMC assumes that organizations have <b>only</b> a tree structure.</p>
 <p class = "fragment" data-fragment-index="6"><i class="fa-solid fa-triangle-exclamation"></i>VMC assumes strict <b>synchronous operations</b>.</p>
-<p class = "fragment" data-fragment-index="7"><i class="fa-solid fa-angles-right"></i>Restricts the model usefulness, leading to <b>abstraction gaps</b>.</p>
+<p class = "fragment" data-fragment-index="12"><i class="fa-solid fa-angles-right"></i>Restricts the model usefulness, leading to <b>abstraction gaps</b>.</p>
 {{</ col >}}
 
 {{< col >}}
@@ -103,12 +103,61 @@ and
     height="170%"
   />
   <img
-    class="fragment"
+    class="fragment current-visible"
     data-fragment-index="4"
     src="images/treeWithResourcesandSuccess.svg"
     width="180%"
     height="170%"
   />
+  <img
+    class="fragment current-visible"
+    data-fragment-index="5"
+    src="images/graph.svg"
+    width="180%"
+    height="170%"
+  />
+  <img
+      class="fragment current-visible"
+      data-fragment-index="6"
+      src="images/firstStep.svg"
+      width="180%"
+      height="170%"
+    />
+  <img
+      class="fragment current-visible"
+      data-fragment-index="7"
+      src="images/secondStep.svg"
+      width="180%"
+      height="170%"
+    />
+  <img
+      class="fragment current-visible"
+      data-fragment-index="8"
+      src="images/thirdStep.svg"
+      width="180%"
+      height="170%"
+    />
+  <img
+      class="fragment current-visible"
+      data-fragment-index="9"
+      src="images/fourthStep.svg"
+      width="180%"
+      height="170%"
+    />
+  <img
+      class="fragment current-visible"
+      data-fragment-index="10"
+      src="images/fifthStep.svg"
+      width="180%"
+      height="170%"
+    />
+  <img
+      class="fragment current-visible"
+      data-fragment-index="11"
+      src="images/sixthStep.svg"
+      width="180%"
+      height="170%"
+    />
 </div>
 {{</ col >}}
 {{</ multicol >}}
@@ -140,10 +189,8 @@ Based on Field Calculus abstractions, it operates in terms of *field*: a distrib
 {{< col class="col-8">}}
 <p class = "fragment" data-fragment-index="0">A node represents an <b>agent</b>.</p>
 <p class = "fragment" data-fragment-index="1">A neighboring link denotes the possibility of two agents to <b>communicate</b>.</p>
-<p class = "fragment" data-fragment-index="2">Each agent is assumed to have <b>sensors:</b>.</p>
-<p class = "fragment" data-fragment-index="3">success sensor, resource sensor, position sensor, distance sensor</p>
-<p class = "fragment" data-fragment-index="4">And <b>actuators</b></p>
-<p class = "fragment" data-fragment-index="5">spawning, destroying</p>
+<p class = "fragment" data-fragment-index="2">Each agent is assumed to have <b>sensors</b>:</br><em>success, resource, position and distance.</em></p>
+<p class = "fragment" data-fragment-index="3">And <b>actuators</b>:</br><em>spawning and destroying.</em></p>
 
 {{</ col >}}
 
@@ -170,7 +217,13 @@ Based on Field Calculus abstractions, it operates in terms of *field*: a distrib
     width="180%"
     height="170%"
   />
-
+  <img
+    class="fragment current-visible"
+    data-fragment-index="3"
+    src="images/actuators.svg"
+    width="180%"
+    height="170%"
+  />
 </div>
 {{</ col >}}
 {{</ multicol >}}
