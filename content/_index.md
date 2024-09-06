@@ -123,7 +123,7 @@ An implementation as a **Field-based** computation with the **Aggregate Computin
 
 # What is Aggregate Computing?
 
-<img src="./images/acDevices.pdf" width=70%>
+<img src="./images/acDevices.svg" width=70%>
 
 A macro-programming approach that defines the **collective behavior** of heterogeneous devices in a **self-organizing system**.
 
@@ -134,6 +134,46 @@ Based on Field Calculus abstractions, it operates in terms of *field*: a distrib
 # The **Aggregate** Vascular Morphogenesis Controller
 
 ## Model
+
+{{< multicol >}}
+
+{{< col class="col-8">}}
+<p class = "fragment" data-fragment-index="0">A node represents an <b>agent</b>.</p>
+<p class = "fragment" data-fragment-index="1">A neighboring link denotes the possibility of two agents to <b>communicate</b>.</p>
+<p class = "fragment" data-fragment-index="2">Each agent is assumed to have <b>sensors:</b>.</p>
+<p class = "fragment" data-fragment-index="3">success sensor, resource sensor, position sensor, distance sensor</p>
+<p class = "fragment" data-fragment-index="4">And <b>actuators</b></p>
+<p class = "fragment" data-fragment-index="5">spawning, destroying</p>
+
+{{</ col >}}
+
+{{< col >}}
+<div class="r-stack">
+  <img
+    class="fragment current-visible"
+    data-fragment-index="0"
+    src="images/agent.svg"
+    width="100%"
+    height="100%"
+  />
+  <img
+    class="fragment current-visible"
+    data-fragment-index="1"
+    src="images/connection.svg"
+    width="180%"
+    height="170%"
+  />
+  <img
+    class="fragment current-visible"
+    data-fragment-index="2"
+    src="images/sensors.svg"
+    width="180%"
+    height="170%"
+  />
+
+</div>
+{{</ col >}}
+{{</ multicol >}}
 
 ---
 
