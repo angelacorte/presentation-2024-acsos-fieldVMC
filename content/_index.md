@@ -67,9 +67,9 @@ and
 <p class = "fragment" data-fragment-index="2">The leaves of the tree start by sending the amount of <b>success</b> they sense to the root.</p>
 <p class = "fragment" data-fragment-index="3">The root then sends back an amount of <b>resources</b> based on the success received from the leaves, regulating the tickness of their connections.</p>
 <h3 class = "fragment" data-fragment-index="4"><i class="fa-solid fa-arrow-right"></i> But it has some limitations</h3>
-<p class = "fragment" data-fragment-index="5"><i class="fa-solid fa-triangle-exclamation"></i> VMC assumes that organizations have <b>only</b> a tree structure.</p>
-<p class = "fragment" data-fragment-index="6"><i class="fa-solid fa-triangle-exclamation"></i>VMC assumes strict <b>synchronous operations</b>.</p>
-<p class = "fragment" data-fragment-index="12"><i class="fa-solid fa-angles-right"></i>Restricts the model usefulness, leading to <b>abstraction gaps</b>.</p>
+<p class = "fragment" data-fragment-index="5"><i class="fa-solid fa-triangle-exclamation"></i>VMC assumes strict <b>synchronous operations</b>.</p>
+<p class = "fragment" data-fragment-index="11"><i class="fa-solid fa-triangle-exclamation"></i> VMC assumes that organizations have <b>only</b> a tree structure.</p>
+<p class = "fragment" data-fragment-index="12"><i class="fa-solid fa-angles-right"></i>Could restricts the model usefulness, leading to <b>abstraction gaps</b>.</p>
 {{</ col >}}
 
 {{< col >}}
@@ -110,54 +110,61 @@ and
     height="170%"
   />
   <img
-    class="fragment current-visible"
-    data-fragment-index="5"
-    src="images/graph.svg"
-    width="180%"
-    height="170%"
-  />
-  <img
       class="fragment current-visible"
-      data-fragment-index="6"
+      data-fragment-index="5"
       src="images/firstStep.svg"
       width="180%"
       height="170%"
     />
   <img
       class="fragment current-visible"
-      data-fragment-index="7"
+      data-fragment-index="6"
       src="images/secondStep.svg"
       width="180%"
       height="170%"
     />
   <img
       class="fragment current-visible"
-      data-fragment-index="8"
+      data-fragment-index="7"
       src="images/thirdStep.svg"
       width="180%"
       height="170%"
     />
   <img
       class="fragment current-visible"
-      data-fragment-index="9"
+      data-fragment-index="8"
       src="images/fourthStep.svg"
       width="180%"
       height="170%"
     />
   <img
       class="fragment current-visible"
-      data-fragment-index="10"
+      data-fragment-index="9"
       src="images/fifthStep.svg"
       width="180%"
       height="170%"
     />
   <img
       class="fragment current-visible"
-      data-fragment-index="11"
+      data-fragment-index="10"
       src="images/sixthStep.svg"
       width="180%"
       height="170%"
     />
+  <img
+    class="fragment current-visible"
+    data-fragment-index="11"
+    src="images/graph.svg"
+    width="180%"
+    height="170%"
+  />
+  <img
+    class="fragment current-visible"
+    data-fragment-index="12"
+    src="images/graph.svg"
+    width="180%"
+    height="170%"
+  />
 </div>
 {{</ col >}}
 {{</ multicol >}}
@@ -234,9 +241,79 @@ Based on Field Calculus abstractions, it operates in terms of *field*: a distrib
 
 ## Implementation
 
-(roots, regions, flaws)
-open source, soon in standard lib -> pattern organizzativi che prima non c'erano
-validation made by qualitative approach
+{{< multicol >}}
+
+{{% col class="text-start col-md-7" %}}
+
+Structures as <b>graphs</b> are supported. 
+
+To define the forward and backward flows of resources and success, we used the _self-organizing coordination regions_ pattern, hence supporting <b>multiple trees</b> and a <b>dynamic</b>, <b>resilient set of trees</b>.
+
+<p class = "fragment" data-fragment-index="0">Given a network of devices, the <b>SCR</b> pattern performs four steps:</p>
+<ol>
+  <li class="fragment" data-fragment-index="1">Elects sparse <b>leaders</b> among candidates;</li>
+  <li class="fragment" data-fragment-index="3">Evolves <b>regions</b> from leaders;</li>
+  <li class="fragment" data-fragment-index="4">Creates <b>upstream</b> information <b>flows</b> towards the leader;</li>
+  <li class="fragment" data-fragment-index="5">Performs <b>decision-making</b> at the leader and <b>downstream decisions</b>.</li>
+</ol>
+
+{{%/ col %}}
+
+{{% col %}}
+<div class="r-stack">
+  <img
+    class=" current-visible"
+    src="images/network-1.svg"
+    width="100%"
+    height="100%"
+  />
+  <img
+    class="fragment current-visible"
+    data-fragment-index="1"
+    src="images/network-candidates.svg"
+    width="180%"
+    height="170%"
+  />
+  <img
+    class="fragment current-visible"
+    data-fragment-index="2"
+    src="images/network-leaders.svg"
+    width="180%"
+    height="170%"
+  />
+  <img
+    class="fragment current-visible"
+    data-fragment-index="3"
+    src="images/network-regions.svg"
+    width="180%"
+    height="170%"
+  />
+    <img
+    class="fragment current-visible"
+    data-fragment-index="4"
+    src="images/network-upstream.svg"
+    width="180%"
+    height="170%"
+  />
+    <img
+    class="fragment current-visible"
+    data-fragment-index="5"
+    src="images/network-downstream2.svg"
+    width="180%"
+    height="170%"
+  />
+</div>
+{{%/ col %}}
+
+{{</ multicol >}}
+
+
+<!-- SCR addresses problem decomposition and task assignment in distributed settings by: (i) electing sparse lead- ers; (ii) evolving regions from leaders; (iii) creating upstream information flows [14] towards the leader; (iv) performing decision-making at the leader and downstreaming decisions. -->
+
+
+<!-- (roots, regions, flaws) -->
+<!-- open source, soon in standard lib -> pattern organizzativi che prima non c'erano -->
+<!-- validation made by qualitative approach -->
 
 ---
 
