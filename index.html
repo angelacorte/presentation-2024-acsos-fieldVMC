@@ -207,10 +207,34 @@ and
 <!-- validation made by qualitative approach -->
 </section><section>
 <h1 id="the-aggregate-vascular-morphogenesis-controller-2">The <strong>Aggregate</strong> Vascular Morphogenesis Controller</h1>
-<h2 id="distinctive-features">distinctive features</h2>
-<p>(multiple leaders, growth and shrink, merge and split)</p>
+<h2 id="supported-features">Supported features</h2>
+<ul style="margin-left: 3em; margin-right: 3em;">
+
+
+<span class="fragment ">
+    <li><strong>Multiple leaders</strong>: allowing easier management of large network by splitting them in sub-systems;</li>
+
+</span>
+
+
+
+<span class="fragment ">
+    <li><strong>Growth and shrink</strong>: different implementations can lead to different structures.<br>
+  The strategy adopted is <em>spawning/destroying</em> when resources are <em>above/under</em> a threshold for a reasonable amount of time, 
+  or spawning depending on the current children count;</li>
+
+</span>
+
+
+
+<span class="fragment ">
+    <li><strong>Merge and split</strong>: ihnerits <em>self-organizing</em> capabilities from AC, thus supports network segmentation or merging.</li>
+
+</span>
+
+</ul>
 </section><section>
-<h1 id="self-construction">Self-Construction</h1>
+<h1 id="application-example-self-construction">Application example: <strong>Self-Construction</strong></h1>
 
 <div class="container w-100 m-0 p-0">
     <div class="row ">
@@ -222,13 +246,18 @@ and
 
 
 
-<div class="col "><p>Some text here</p>
+<div class="col "><h3 id="germination">Germination</h3>
+<p>Starting from a single node with spawning and destroying policies.</p>
+<p>The first node self-elects as root and spawns new nodes.
+When a new one is in a better position, it gets elected as root.</p>
+<p>In this way the system goes towards better resources.</p>
+<p>Then the system expands towards the success source as much as possible.</p>
 </div>
 
 </div>
 </div>
 </section><section>
-<h1 id="self-repairing">Self-Repairing</h1>
+<h1 id="application-example-self-repairing">Application example: <strong>Self-Repairing</strong></h1>
 
 <div class="container w-100 m-0 p-0">
     <div class="row ">
@@ -246,7 +275,7 @@ and
 </div>
 </div>
 </section><section>
-<h1 id="self-integration">Self-Integration</h1>
+<h1 id="application-example-self-integration">Application example: <strong>Self-Integration</strong></h1>
 
 <div class="container w-100 m-0 p-0">
     <div class="row ">
@@ -264,7 +293,7 @@ and
 </div>
 </div>
 </section><section>
-<h1 id="self-optimization">Self-Optimization</h1>
+<h1 id="application-example-self-optimization">Application example: <strong>Self-Optimization</strong></h1>
 
 <div class="container w-100 m-0 p-0">
     <div class="row ">
@@ -282,7 +311,7 @@ and
 </div>
 </div>
 </section><section>
-<h1 id="self-segmentation">Self-Segmentation</h1>
+<h1 id="application-example-self-segmentation">Application example: <strong>Self-Segmentation</strong></h1>
 
 <div class="container w-100 m-0 p-0">
     <div class="row ">
@@ -302,6 +331,8 @@ and
 </section><section>
 <h1 id="conclusions--future-works">Conclusions / future works</h1>
 <p>per cosa possiamo usarlo?</p>
+</section><section>
+<h1 id="references">References</h1>
 </section>
 
   
