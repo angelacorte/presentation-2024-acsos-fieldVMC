@@ -319,12 +319,25 @@ To define the forward and backward flows of resources and success, we used the _
 
 # The **Aggregate** Vascular Morphogenesis Controller
 
-## distinctive features 
-(multiple leaders, growth and shrink, merge and split)
+## Supported features 
+
+<ul style="margin-left: 3em; margin-right: 3em;">
+{{% fragment %}}
+  <li><strong>Multiple leaders</strong>: allowing easier management of large network by splitting them in sub-systems;</li>
+{{%/ fragment %}}
+{{% fragment %}}
+  <li><strong>Growth and shrink</strong>: different implementations can lead to different structures.</br>
+  The strategy adopted is <em>spawning/destroying</em> when resources are <em>above/under</em> a threshold for a reasonable amount of time, 
+  or spawning depending on the current children count;</li>
+{{%/ fragment %}}
+{{% fragment %}}
+  <li><strong>Merge and split</strong>: ihnerits <em>self-organizing</em> capabilities from AC, thus supports network segmentation or merging.</li>
+{{%/ fragment %}}
+</ul>
 
 --- 
 
-# Self-Construction
+# Application example: **Self-Construction**
 
 {{< multicol >}}
 {{< col >}}
@@ -332,14 +345,23 @@ To define the forward and backward flows of resources and success, we used the _
 {{</ col >}}
 
 {{% col %}}
-Some text here
+### Germination
+Starting from a single node with spawning and destroying policies.
+
+The first node self-elects as root and spawns new nodes. 
+When a new one is in a better position, it gets elected as root. 
+
+In this way the system goes towards better resources.
+
+Then the system expands towards the success source as much as possible.
+
 {{%/ col %}}
 
 {{</ multicol >}}
 
 ---
 
-# Self-Repairing
+# Application example: **Self-Repairing**
 
 {{< multicol >}}
 {{< col >}}
@@ -354,7 +376,7 @@ Some text here
 
 ---
 
-# Self-Integration
+# Application example: **Self-Integration**
 
 {{< multicol >}}
 {{< col >}}
@@ -369,7 +391,7 @@ Some text here
 
 ---
 
-# Self-Optimization
+# Application example: **Self-Optimization**
 
 {{< multicol >}}
 {{< col >}}
@@ -384,7 +406,7 @@ fixa la gif che ha le immagini sbagliate
 
 ---
 
-# Self-Segmentation
+# Application example: **Self-Segmentation**
 
 {{< multicol >}}
 {{< col >}}
@@ -402,3 +424,7 @@ Some text here
 # Conclusions / future works 
 
 per cosa possiamo usarlo?
+
+---
+
+# References
