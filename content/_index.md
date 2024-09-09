@@ -249,7 +249,7 @@ Structures as <b>graphs</b> are supported.
 
 To define the forward and backward flows of resources and success, we used the _self-organizing coordination regions_ pattern, hence supporting <b>multiple trees</b> and a <b>dynamic</b>, <b>resilient set of trees</b>.
 
-<p class = "fragment" data-fragment-index="0">Given a network of devices, the <b>SCR</b> pattern performs four steps:</p>
+<p class = "fragment" data-fragment-index="0">Given a network of devices, the <b>SCR</b> pattern performs simultaneously four steps:</p>
 <ol>
   <li class="fragment" data-fragment-index="1">Elects sparse <b>leaders</b> among candidates;</li>
   <li class="fragment" data-fragment-index="3">Evolves <b>regions</b> from leaders;</li>
