@@ -337,7 +337,7 @@ To define the forward and backward flows of resources and success, we used the _
 
 --- 
 
-# Application example: **Self-Construction**
+# Application example: **Germination**
 
 {{< multicol >}}
 {{< col >}}
@@ -345,15 +345,16 @@ To define the forward and backward flows of resources and success, we used the _
 {{</ col >}}
 
 {{% col %}}
-### Germination
-Starting from a single node with spawning and destroying policies.
+## Self-Construction
+Starts from a single node with spawning and destroying policies.
 
 The first node self-elects as root and spawns new nodes. 
 When a new one is in a better position, it gets elected as root. 
 
 In this way the system goes towards better resources.
 
-Then the system expands towards the success source as much as possible.
+Then the system expands towards the success source as much as possible,
+and stabilizes.
 
 {{%/ col %}}
 
@@ -361,7 +362,7 @@ Then the system expands towards the success source as much as possible.
 
 ---
 
-# Application example: **Self-Repairing**
+# Application example: **cutting**
 
 {{< multicol >}}
 {{< col >}}
@@ -369,14 +370,26 @@ Then the system expands towards the success source as much as possible.
 {{</ col >}}
 
 {{% col %}}
-Some text here
+## Self-Repairing
+
+Starts from a network filled with nodes able to communicate with others within a specific range.
+
+No spawn or destroy policies.
+
+The structure elects a leader, that results to be the one nearest the resources source.
+
+Once the system has stabilized, all the nodes at the center of the structure are removed, 
+creating two different non-communicating sub-systems.
+
+Then the two sub-systems restabilize independently.
+
 {{%/ col %}}
 
 {{</ multicol >}}
 
 ---
 
-# Application example: **Self-Integration**
+# Application example: **Grafting**
 
 {{< multicol >}}
 {{< col >}}
@@ -384,29 +397,22 @@ Some text here
 {{</ col >}}
 
 {{% col %}}
-Some text here
+## Self-Integration
+
+Starts from two non-communicating systems, with no spawn and destroy policies.
+
+After the two systems have stabilized, 
+they are merged.
+
+A new system is created, with the resources shared among the nodes differently.
+
 {{%/ col %}}
 
 {{</ multicol >}}
 
 ---
 
-# Application example: **Self-Optimization**
-
-{{< multicol >}}
-{{< col >}}
-<img src="images/graftWithSpawningWithIndex.gif" alt="One root sequence">
-{{</ col >}}
-
-{{% col %}}
-fixa la gif che ha le immagini sbagliate
-{{%/ col %}}
-
-{{</ multicol >}}
-
----
-
-# Application example: **Self-Segmentation**
+# Application example: **Budding**
 
 {{< multicol >}}
 {{< col >}}
@@ -414,7 +420,34 @@ fixa la gif che ha le immagini sbagliate
 {{</ col >}}
 
 {{% col %}}
-Some text here
+## Self-Segmentation
+
+Starts from two non-communicating systems with no spawn and destroy policies.
+
+The influence radius of a leader is reduced, 
+in a way each system elects more than one leader, 
+therefore dividing itself into subregions.
+
+After their stabilization, 
+the two systems are merged,
+and the subregions change based on their potential new leaders.
+
+{{%/ col %}}
+
+{{</ multicol >}}
+
+---
+
+# Application example: **Abscission and regrowth**
+
+{{< multicol >}}
+{{< col >}}
+<img src="images/graftWithSpawningWithIndex.gif" alt="One root sequence">
+{{</ col >}}
+
+{{% col %}}
+## Self-Optimization
+
 {{%/ col %}}
 
 {{</ multicol >}}
