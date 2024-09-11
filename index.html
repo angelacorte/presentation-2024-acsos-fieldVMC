@@ -88,7 +88,7 @@ and
 
 </span>
 
-<span class="fragment "><h2 id="a-runtime-generated-hierarchical-structure">A runtime-generated hierarchical structure</h2>
+<span class="fragment "><h2 id="a-runtime-generated-hierarchical-structure"><strong>A runtime-generated hierarchical structure</strong></h2>
 </span>
 </section><section>
 <h1 id="the-vascular-morphogenesis-controller">The Vascular Morphogenesis Controller</h1>
@@ -99,14 +99,14 @@ and
 
 
 <div class="col col-8">
-<p class="fragment" data-fragment-index="0">The <b>VMC</b> is a model for the growth of artificial structures over time.</p>
-<p class="fragment" data-fragment-index="1">It models tree-like structures, in which every node can <b>get information from the environment</b>.</p>
+<p class="fragment" data-fragment-index="0">The <b>VMC</b><small>[1]</small> is a model for the growth of artificial structures over time.</p>
+<p class="fragment" data-fragment-index="1">It models <b>tree-like structures</b>, in which every node can get information from the environment.</p>
 <p class="fragment" data-fragment-index="2">The leaves of the tree start by sending the amount of <b>success</b> they sense to the root.</p>
 <p class="fragment" data-fragment-index="3">The root then sends back an amount of <b>resources</b> based on the success received from the leaves, regulating the tickness of their connections.</p>
 <h3 class="fragment" data-fragment-index="4"><i class="fa-solid fa-arrow-right"></i> But it has some limitations</h3>
 <p class="fragment" data-fragment-index="5"><i class="fa-solid fa-triangle-exclamation"></i>VMC assumes strict <b>synchronous operations</b>.</p>
 <p class="fragment" data-fragment-index="11"><i class="fa-solid fa-triangle-exclamation"></i> VMC assumes that organizations have <b>only</b> a tree structure.</p>
-<p class="fragment" data-fragment-index="12"><i class="fa-solid fa-angles-right"></i>Could restricts the model usefulness, leading to <b>abstraction gaps</b>.</p>
+<!-- <p class = "fragment" data-fragment-index="12"><i class="fa-solid fa-angles-right"></i>Could restricts the model usefulness, leading to <b>abstraction gaps</b>.</p> -->
 </div>
 
 
@@ -125,14 +125,31 @@ and
   <img class="fragment current-visible" data-fragment-index="9" src="images/fifthStep.svg" width="180%" height="170%">
   <img class="fragment current-visible" data-fragment-index="10" src="images/sixthStep.svg" width="180%" height="170%">
   <img class="fragment current-visible" data-fragment-index="11" src="images/graph.svg" width="180%" height="170%">
-  <img class="fragment current-visible" data-fragment-index="12" src="images/graph.svg" width="180%" height="170%">
+  <!-- <img
+    class="fragment current-visible"
+    data-fragment-index="12"
+    src="images/graph.svg"
+    width="180%"
+    height="170%"
+  /> -->
 </div>
 </div>
 </div>
+</div>
+<div>
+<small style="text-align: left"> 
+<p class="fragment" data-fragment-index="0">[1] Zahadat, P., Hofstadler, D.N., Schmickl, T. "Morphogenesis as a Collective Decision of Agents Competing for Limited Resource: A Plants Approach." 2018.</p>
+</small>
 </div>
 </section><section>
 <h1 id="a-possible-solution">A Possible Solution?</h1>
-<p>An implementation as a <strong>Field-based</strong> computation with the <strong>Aggregate Computing</strong> paradigm!</p>
+<p>An implementation as a <strong>Field-based</strong><small>[2]</small> computation with the <strong>Aggregate Computing</strong><small>[3]</small> paradigm!</p>
+<div>
+<small style="text-align: left"> 
+[2] Viroli, M., Beal, J., Damiani, F., Audrito, G., Casadei, R., Pianini, D. "From distributed coordination to field calculus and aggregate computing." 2019.<br>
+[3] Beal, J., Pianini, D., Viroli, M. "Aggregate Programming for the Internet of Things." 2015.
+</small> 
+</div>
 </section><section>
 <h1 id="what-is-aggregate-computing">What is Aggregate Computing?</h1>
 <img src="./images/acDevices.svg" width="70%">
@@ -177,15 +194,16 @@ and
 
 
 <div class="col text-start col-md-7"><p>Structures as <b>graphs</b> are supported.</p>
-<p>To define the forward and backward flows of resources and success, we used the <em>self-organizing coordination regions</em> pattern, hence supporting <b>multiple trees</b> and a <b>dynamic</b>, <b>resilient set of trees</b>.</p>
-<p class="fragment" data-fragment-index="0">Given a network of devices, the <b>SCR</b> pattern performs simultaneously four steps:</p>
+<p>Use of <em>self-organizing coordination regions</em><small>[4]</small> pattern to define the forward and backward flows of resources and success.</p>
+<p class="fragment" data-fragment-index="0">Given a network of devices, the <b>SCR</b> pattern performs <b>simultaneously</b> four steps:</p>
 <ol>
   <li class="fragment" data-fragment-index="1">Elects sparse <b>leaders</b> among candidates;</li>
   <li class="fragment" data-fragment-index="3">Evolves <b>regions</b> from leaders;</li>
   <li class="fragment" data-fragment-index="4">Creates <b>upstream</b> information <b>flows</b> towards the leader;</li>
   <li class="fragment" data-fragment-index="5">Performs <b>decision-making</b> at the leader and <b>downstream decisions</b>.</li>
 </ol>
-</div>
+<p class="fragment" data-fragment-index="6">Hence supporting <b>multiple trees</b> and a <b>dynamic</b>, <b>resilient set of trees</b>.</p><p>
+</p></div>
 
 
 
@@ -196,10 +214,16 @@ and
   <img class="fragment current-visible" data-fragment-index="3" src="images/network-regions.svg" width="180%" height="170%">
     <img class="fragment current-visible" data-fragment-index="4" src="images/network-upstream.svg" width="180%" height="170%">
     <img class="fragment current-visible" data-fragment-index="5" src="images/network-downstream2.svg" width="180%" height="170%">
+  <img class="fragment current-visible" data-fragment-index="6" src="images/network-downstream2.svg" width="180%" height="170%">
 </div>
 </div>
 
 </div>
+</div>
+<div>
+<small style="text-align: left"> 
+[4] Casadei, R., Pianini, D., Viroli, M., Natali, A. "Self-organising Coordination Regions: A Pattern for Edge Computing." 2019.
+</small> 
 </div>
 <!-- SCR addresses problem decomposition and task assignment in distributed settings by: (i) electing sparse lead- ers; (ii) evolving regions from leaders; (iii) creating upstream information flows [14] towards the leader; (iv) performing decision-making at the leader and downstreaming decisions. -->
 <!-- (roots, regions, flaws) -->
@@ -219,16 +243,16 @@ and
 
 
 <span class="fragment ">
-    <li><strong>Growth and shrink</strong>: different implementations can lead to different structures.<br>
-  The strategy adopted is <em>spawning/destroying</em> when resources are <em>above/under</em> a threshold for a reasonable amount of time, 
-  or spawning depending on the current children count;</li>
+    <li><strong>Growth and shrink</strong>: different implementations of <em>spawning/destroying</em> strategies can lead to different structures.<br>
+  <!-- The strategy adopted is <em>spawning/destroying</em> when resources are <em>above/under</em> a threshold for a reasonable amount of time,  -->
+  <!-- or spawning depending on the current children count;</li> -->
 
-</span>
+
 
 
 
 <span class="fragment ">
-    <li><strong>Merge and split</strong>: ihnerits <em>self-organizing</em> capabilities from AC, thus supports network segmentation or merging.</li>
+    </span></li><li><strong>Merge and split</strong>: ihnerits <em>self-organizing</em> capabilities from AC, thus supports network segmentation or merging.</li>
 
 </span>
 
@@ -247,7 +271,7 @@ and
 
 
 <div class="col "><h2 id="self-construction">Self-Construction</h2>
-<p>Starts from a single node with spawning and destroying policies.</p>
+<p>Starts from a single node <strong>with</strong> spawning and destroying policies.</p>
 <p>The first node self-elects as root and spawns new nodes.
 When a new one is in a better position, it gets elected as root.</p>
 <p>In this way the system goes towards better resources.</p>
@@ -271,8 +295,8 @@ and stabilizes.</p>
 
 
 <div class="col "><h2 id="self-repairing">Self-Repairing</h2>
-<p>Starts from a network filled with nodes able to communicate with others within a specific range.</p>
-<p>No spawn or destroy policies.</p>
+<p>Starts from a network filled with nodes able to communicate with others within a specific range,
+<strong>without</strong> spawn or destroy policies.</p>
 <p>The structure elects a leader, that results to be the one nearest the resources source.</p>
 <p>Once the system has stabilized, all the nodes at the center of the structure are removed,
 creating two different non-communicating sub-systems.</p>
@@ -295,7 +319,7 @@ creating two different non-communicating sub-systems.</p>
 
 
 <div class="col "><h2 id="self-integration">Self-Integration</h2>
-<p>Starts from two non-communicating systems, with no spawn and destroy policies.</p>
+<p>Starts from two non-communicating systems, <strong>without</strong> spawn and destroy policies.</p>
 <p>After the two systems have stabilized,
 they are merged.</p>
 <p>A new system is created, with the resources shared among the nodes differently.</p>
@@ -317,10 +341,10 @@ they are merged.</p>
 
 
 <div class="col "><h2 id="self-segmentation">Self-Segmentation</h2>
-<p>Starts from two non-communicating systems with no spawn and destroy policies.</p>
+<p>Starts from two non-communicating systems <strong>without</strong> spawn and destroy policies.</p>
 <p>The influence radius of a leader is reduced,
-in a way each system elects more than one leader,
-therefore dividing itself into subregions.</p>
+in a way each system <strong>elects more than one leader</strong>,
+therefore <strong>dividing itself into subregions</strong>.</p>
 <p>After their stabilization,
 the two systems are merged,
 and the subregions change based on their potential new leaders.</p>
@@ -342,16 +366,28 @@ and the subregions change based on their potential new leaders.</p>
 
 
 <div class="col "><h2 id="self-optimization">Self-Optimization</h2>
+<p>Starts from two non-communicating substructures <strong>with</strong> spawn and destroy policies.</p>
+<p>Firstly, the two substructures are optimized,
+then they get connected due to the spawning of new nodes.</p>
+<p>The new global structure reshapes,
+optimizing the balance between resources and success.</p>
 </div>
 
 </div>
 </div>
 </section><section>
-<h1 id="conclusions--future-works">Conclusions / future works</h1>
-<p>per cosa possiamo usarlo?</p>
+<h1 id="conclusions">Conclusions</h1>
+<p>The approach enables to express morphogenetic algorithm by a <strong>macroscopic perspective</strong> via aggregate computing.</p>
+<p>Possible future directions:</p>
+<ul>
+<li>Inspect more <strong>dynamics</strong> and <strong>complex organizational scenarios</strong>;</li>
+<li>Development of a <strong>software library</strong> of <em>aggregate morphogenetic blocks</em>;</li>
+<li>Investigate the system response to <strong>continuous perturbations</strong>;</li>
+<li>Apply this approach to <strong>real-world scenarios</strong>.</li>
+</ul>
 </section><section>
-<h1 id="references">References</h1>
-</section>
+<h2 id="reproducible-examples-here">Reproducible examples here!</h2>
+<img src="images/vmc-qr.svg" alt="Examples repo"></section>
 
   
 
