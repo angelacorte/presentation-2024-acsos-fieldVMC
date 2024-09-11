@@ -350,17 +350,9 @@ Use of _self-organizing coordination regions_<small>[4]</small> pattern to defin
 ## Supported features 
 
 <ul style="margin-left: 3em; margin-right: 3em;">
-{{% fragment %}}
-  <li><strong>Multiple leaders</strong>: allowing easier management of large network by splitting them in sub-systems;</li>
-{{%/ fragment %}}
-{{% fragment %}}
-  <li><strong>Growth and shrink</strong>: different implementations of <em>spawning/destroying</em> strategies can lead to different structures.</br>
-  <!-- The strategy adopted is <em>spawning/destroying</em> when resources are <em>above/under</em> a threshold for a reasonable amount of time,  -->
-  <!-- or spawning depending on the current children count;</li> -->
-{{%/ fragment %}}
-{{% fragment %}}
-  <li><strong>Merge and split</strong>: ihnerits <em>self-organizing</em> capabilities from AC, thus supports network segmentation or merging.</li>
-{{%/ fragment %}}
+  <li class="fragment" data-fragment-index="1"><strong>Multiple leaders</strong>: allowing easier management of large network by splitting them in sub-systems;</li>
+  <li class="fragment" data-fragment-index="2"><strong>Growth and shrink</strong>: different implementations of <em>spawning/destroying</em> strategies can lead to different structures.</br>
+  <li class="fragment" data-fragment-index="3"><strong>Merge and split</strong>: ihnerits <em>self-organizing</em> capabilities from AC, thus supports network segmentation or merging.</li>
 </ul>
 
 --- 
