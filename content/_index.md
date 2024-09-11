@@ -53,23 +53,23 @@ and
 # What do they have in common?
 {{%/ fragment %}}
 
-{{< frag c="## A runtime-generated hierarchical structure" >}}
+{{< frag c="## **A runtime-generated hierarchical structure**" >}}
 
 ---
 
-# The Vascular Morphogenesis Controller
+# The Vascular Morphogenesis Controller 
 
 {{< multicol >}}
 
 {{< col class="col-8">}}
-<p class = "fragment" data-fragment-index="0">The <b>VMC</b> is a model for the growth of artificial structures over time.</p>
-<p class = "fragment" data-fragment-index="1">It models tree-like structures, in which every node can <b>get information from the environment</b>.</p>
+<p class = "fragment" data-fragment-index="0">The <b>VMC</b><small>[1]</small> is a model for the growth of artificial structures over time.</p>
+<p class = "fragment" data-fragment-index="1">It models <b>tree-like structures</b>, in which every node can get information from the environment.</p>
 <p class = "fragment" data-fragment-index="2">The leaves of the tree start by sending the amount of <b>success</b> they sense to the root.</p>
 <p class = "fragment" data-fragment-index="3">The root then sends back an amount of <b>resources</b> based on the success received from the leaves, regulating the tickness of their connections.</p>
 <h3 class = "fragment" data-fragment-index="4"><i class="fa-solid fa-arrow-right"></i> But it has some limitations</h3>
 <p class = "fragment" data-fragment-index="5"><i class="fa-solid fa-triangle-exclamation"></i>VMC assumes strict <b>synchronous operations</b>.</p>
 <p class = "fragment" data-fragment-index="11"><i class="fa-solid fa-triangle-exclamation"></i> VMC assumes that organizations have <b>only</b> a tree structure.</p>
-<p class = "fragment" data-fragment-index="12"><i class="fa-solid fa-angles-right"></i>Could restricts the model usefulness, leading to <b>abstraction gaps</b>.</p>
+<!-- <p class = "fragment" data-fragment-index="12"><i class="fa-solid fa-angles-right"></i>Could restricts the model usefulness, leading to <b>abstraction gaps</b>.</p> -->
 {{</ col >}}
 
 {{< col >}}
@@ -158,22 +158,35 @@ and
     width="180%"
     height="170%"
   />
-  <img
+  <!-- <img
     class="fragment current-visible"
     data-fragment-index="12"
     src="images/graph.svg"
     width="180%"
     height="170%"
-  />
+  /> -->
 </div>
 {{</ col >}}
 {{</ multicol >}}
+
+<div>
+<small style="text-align: left"> 
+<p class = "fragment" data-fragment-index="0">[1] Zahadat, P., Hofstadler, D.N., Schmickl, T. "Morphogenesis as a Collective Decision of Agents Competing for Limited Resource: A Plants Approach." 2018.</p>
+</small>
+</div>
 
 ---
 
 # A Possible Solution?
 
-An implementation as a **Field-based** computation with the **Aggregate Computing** paradigm!
+An implementation as a **Field-based**<small>[2]</small> computation with the **Aggregate Computing**<small>[3]</small> paradigm!
+
+<div>
+<small style="text-align: left"> 
+[2] Viroli, M., Beal, J., Damiani, F., Audrito, G., Casadei, R., Pianini, D. "From distributed coordination to field calculus and aggregate computing." 2019.</br>
+[3] Beal, J., Pianini, D., Viroli, M. "Aggregate Programming for the Internet of Things." 2015.
+</small> 
+</div>
 
 ---
 
@@ -247,15 +260,17 @@ Based on Field Calculus abstractions, it operates in terms of *field*: a distrib
 
 Structures as <b>graphs</b> are supported. 
 
-To define the forward and backward flows of resources and success, we used the _self-organizing coordination regions_ pattern, hence supporting <b>multiple trees</b> and a <b>dynamic</b>, <b>resilient set of trees</b>.
+Use of _self-organizing coordination regions_<small>[4]</small> pattern to define the forward and backward flows of resources and success.
 
-<p class = "fragment" data-fragment-index="0">Given a network of devices, the <b>SCR</b> pattern performs simultaneously four steps:</p>
+<p class = "fragment" data-fragment-index="0">Given a network of devices, the <b>SCR</b> pattern performs <b>simultaneously</b> four steps:</p>
 <ol>
   <li class="fragment" data-fragment-index="1">Elects sparse <b>leaders</b> among candidates;</li>
   <li class="fragment" data-fragment-index="3">Evolves <b>regions</b> from leaders;</li>
   <li class="fragment" data-fragment-index="4">Creates <b>upstream</b> information <b>flows</b> towards the leader;</li>
   <li class="fragment" data-fragment-index="5">Performs <b>decision-making</b> at the leader and <b>downstream decisions</b>.</li>
 </ol>
+
+<p class="fragment" data-fragment-index="6">Hence supporting <b>multiple trees</b> and a <b>dynamic</b>, <b>resilient set of trees</b>.<p>
 
 {{%/ col %}}
 
@@ -302,11 +317,24 @@ To define the forward and backward flows of resources and success, we used the _
     width="180%"
     height="170%"
   />
+  <img
+    class="fragment current-visible"
+    data-fragment-index="6"
+    src="images/network-downstream2.svg"
+    width="180%"
+    height="170%"
+  />
 </div>
 {{%/ col %}}
 
 {{</ multicol >}}
 
+
+<div>
+<small style="text-align: left"> 
+[4] Casadei, R., Pianini, D., Viroli, M., Natali, A. "Self-organising Coordination Regions: A Pattern for Edge Computing." 2019.
+</small> 
+</div>
 
 <!-- SCR addresses problem decomposition and task assignment in distributed settings by: (i) electing sparse lead- ers; (ii) evolving regions from leaders; (iii) creating upstream information flows [14] towards the leader; (iv) performing decision-making at the leader and downstreaming decisions. -->
 
@@ -326,9 +354,9 @@ To define the forward and backward flows of resources and success, we used the _
   <li><strong>Multiple leaders</strong>: allowing easier management of large network by splitting them in sub-systems;</li>
 {{%/ fragment %}}
 {{% fragment %}}
-  <li><strong>Growth and shrink</strong>: different implementations can lead to different structures.</br>
-  The strategy adopted is <em>spawning/destroying</em> when resources are <em>above/under</em> a threshold for a reasonable amount of time, 
-  or spawning depending on the current children count;</li>
+  <li><strong>Growth and shrink</strong>: different implementations of <em>spawning/destroying</em> strategies can lead to different structures.</br>
+  <!-- The strategy adopted is <em>spawning/destroying</em> when resources are <em>above/under</em> a threshold for a reasonable amount of time,  -->
+  <!-- or spawning depending on the current children count;</li> -->
 {{%/ fragment %}}
 {{% fragment %}}
   <li><strong>Merge and split</strong>: ihnerits <em>self-organizing</em> capabilities from AC, thus supports network segmentation or merging.</li>
@@ -346,7 +374,7 @@ To define the forward and backward flows of resources and success, we used the _
 
 {{% col %}}
 ## Self-Construction
-Starts from a single node with spawning and destroying policies.
+Starts from a single node **with** spawning and destroying policies.
 
 The first node self-elects as root and spawns new nodes. 
 When a new one is in a better position, it gets elected as root. 
@@ -372,9 +400,8 @@ and stabilizes.
 {{% col %}}
 ## Self-Repairing
 
-Starts from a network filled with nodes able to communicate with others within a specific range.
-
-No spawn or destroy policies.
+Starts from a network filled with nodes able to communicate with others within a specific range,
+**without** spawn or destroy policies.
 
 The structure elects a leader, that results to be the one nearest the resources source.
 
@@ -399,7 +426,7 @@ Then the two sub-systems restabilize independently.
 {{% col %}}
 ## Self-Integration
 
-Starts from two non-communicating systems, with no spawn and destroy policies.
+Starts from two non-communicating systems, **without** spawn and destroy policies.
 
 After the two systems have stabilized, 
 they are merged.
@@ -422,11 +449,11 @@ A new system is created, with the resources shared among the nodes differently.
 {{% col %}}
 ## Self-Segmentation
 
-Starts from two non-communicating systems with no spawn and destroy policies.
+Starts from two non-communicating systems **without** spawn and destroy policies.
 
 The influence radius of a leader is reduced, 
-in a way each system elects more than one leader, 
-therefore dividing itself into subregions.
+in a way each system **elects more than one leader**, 
+therefore **dividing itself into subregions**.
 
 After their stabilization, 
 the two systems are merged,
@@ -448,16 +475,33 @@ and the subregions change based on their potential new leaders.
 {{% col %}}
 ## Self-Optimization
 
+Starts from two non-communicating substructures **with** spawn and destroy policies.
+
+Firstly, the two substructures are optimized, 
+then they get connected due to the spawning of new nodes.
+
+The new global structure reshapes, 
+optimizing the balance between resources and success.
 {{%/ col %}}
 
 {{</ multicol >}}
 
 ---
 
-# Conclusions / future works 
+# Conclusions 
 
-per cosa possiamo usarlo?
+The approach enables to express morphogenetic algorithm by a **macroscopic perspective** via aggregate computing.
+
+Possible future directions:
+
+- Inspect more **dynamics** and **complex organizational scenarios**;
+- Development of a **software library** of _aggregate morphogenetic blocks_;
+- Investigate the system response to **continuous perturbations**;
+- Apply this approach to **real-world scenarios**.
 
 ---
 
-# References
+
+## Reproducible examples here!
+
+<img src="images/vmc-qr.svg" alt="Examples repo">
