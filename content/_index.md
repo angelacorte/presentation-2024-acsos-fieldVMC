@@ -190,18 +190,18 @@ it will automatically overcome the limitations of the original model.
 
 ---
 
-# Meet Aggregate Computing<small>[3]</small>
+# Meet Aggregate Computing<small>[2]</small>
 
 <img src="./images/acDevices.svg" width=70%>
 
 A macro-programming approach that defines the **collective behavior** of heterogeneous devices in a **self-organizing system**.
 
-Based on the Field Calculus<small>[2]</small>, operates by manipulating distributed data structures called *fields*.
+Based on the **Field Calculus**<small>[3]</small>, operates by manipulating distributed data structures called *fields*.
 
 <div>
 <small style="text-align: left">
-[2] Viroli, M., Beal, J., Damiani, F., Audrito, G., Casadei, R., Pianini, D. "From distributed coordination to field calculus and aggregate computing." 2019.</br>
-[3] Beal, J., Pianini, D., Viroli, M. "Aggregate Programming for the Internet of Things." 2015.
+[2] Beal, J., Pianini, D., Viroli, M. "Aggregate Programming for the Internet of Things." 2015.</br>
+[3] Audrito, G., Viroli, M., Damiani, F., Pianini, D., Beal, J. "A Higher-Order Calculus of Computational Fields." 2019.
 </small>
 </div>
 
@@ -214,7 +214,7 @@ Based on the Field Calculus<small>[2]</small>, operates by manipulating distribu
 {{< multicol >}}
 
 {{< col class="col-8">}}
-<p class = "fragment" data-fragment-index="0">Nodes can <b>compute</b>.</p>
+Nodes can <b>compute</b>
 <p class = "fragment" data-fragment-index="1">Neighboring nodes can <b>communicate</b>.</p>
 <p class = "fragment" data-fragment-index="2">Nodes have <b>sensors</b>:</br><em>success, resource, distance, and optionally position.</em></p>
 <p class = "fragment" data-fragment-index="3">Nodes have optional <b>actuators</b>:</br><em>spawning and destroying.</em></p>
@@ -224,7 +224,7 @@ Based on the Field Calculus<small>[2]</small>, operates by manipulating distribu
 {{< col >}}
 <div class="r-stack">
   <img
-    class="fragment current-visible"
+    class="current-visible"
     data-fragment-index="0"
     src="images/agent.svg"
     width="100%"
@@ -257,7 +257,7 @@ Based on the Field Calculus<small>[2]</small>, operates by manipulating distribu
 
 ---
 
-# The **Aggregate** Vascular Morphogenesis Controller
+# `FieldVMC`: **Aggregate Computing**-based VMC
 
 ## Implementation
 
@@ -272,8 +272,8 @@ the _self-organizing coordination regions_ (SCR)<small>[4]</small> pattern.
 <ol>
   <li class="fragment" data-fragment-index="1">Sparse <b>leader election</b>;</li>
   <li class="fragment" data-fragment-index="3"><b>Control region expansion</b> from leaders;</li>
-  <li class="fragment" data-fragment-index="4"><b>upstream</b> information <b>flows</b> construction;</li>
-  <li class="fragment" data-fragment-index="5"><b>decision-making</b> and <b>downstream propagation</b>.</li>
+  <li class="fragment" data-fragment-index="4"><b>Upstream</b> information <b>flows</b> construction;</li>
+  <li class="fragment" data-fragment-index="5"><b>Decision-making</b> and <b>downstream propagation</b>.</li>
 </ol>
 
 {{%/ col %}}
@@ -306,7 +306,7 @@ the _self-organizing coordination regions_ (SCR)<small>[4]</small> pattern.
     src="images/network-regions.svg"
     width="180%"
     height="170%"
-  />
+  /
     <img
     class="fragment current-visible"
     data-fragment-index="4"
@@ -349,15 +349,37 @@ the _self-organizing coordination regions_ (SCR)<small>[4]</small> pattern.
 
 ---
 
-# The **Aggregate** Vascular Morphogenesis Controller
+# `FieldVMC`: **Aggregate Computing**-based VMC
 
-## Supported features
+{{< multicol >}}
 
-<ul style="margin-left: 3em; margin-right: 3em;">
-  <li class="fragment" data-fragment-index="1"><strong>Multiple leaders</strong>: allowing easier management of large network by splitting them in sub-systems;</li>
-  <li class="fragment" data-fragment-index="2"><strong>Growth and shrink</strong>: different implementations of <em>spawning/destroying</em> strategies can lead to different structures.</br>
-  <li class="fragment" data-fragment-index="3"><strong>Merge and split</strong>: ihnerits <em>self-organizing</em> capabilities from AC, thus supports network segmentation or merging.</li>
+{{< col >}}
+<h2>Functioning</h2>
+<ol>
+  <li><strong>Leader</strong>(s) are chosen <strong>dynamically</strong> based on resource availability;</li>
+  <li class="fragment" data-fragment-index="1">A <strong>gradient field</strong> defines zones around each leader, organized by distance to their nearest leader;</li>
+  <li class="fragment" data-fragment-index="2"><strong>Nodes send data to their leader</strong>, forming a hierarchical tree;</li>
+  <li class="fragment" data-fragment-index="3">Leaders <strong>distribute resources</strong> based on node performance;</li>
+  <li class="fragment" data-fragment-index="4">Nodes <strong>act based on resources and success</strong>, spawning new nodes or self-destructing.</li>
+</ol>
+{{</ col >}}
+
+{{< col >}}
+<h3 class="fragment" data-fragment-index="5"> Supported features</h3>
+
+<ul>
+  <li class="fragment" data-fragment-index="6"><strong>Multiple leaders</strong>: allowing easier management of large network by splitting them in sub-systems;</li>
+  <li class="fragment" data-fragment-index="7"><strong>Growth and shrink</strong>: different implementations of <em>spawning/destroying</em> strategies can lead to different structures.</br>
+  <li class="fragment" data-fragment-index="8"><strong>Merge and split</strong>: ihnerits <em>self-organizing</em> capabilities from AC, thus supports network segmentation or merging.</li>
 </ul>
+<!-- {{< frag c="<h3>Supported features</h3>" >}}
+{{% frag c="- **Multiple leaders**: allowing easier management of large network by splitting them in sub-systems;" %}}
+{{% frag c="- **Growth and shrink**: different implementations of _spawning/destroying_ strategies can lead to different structures;" %}}
+{{% frag c="- **Merge and split**: inherits _self-organizing_ capabilities from AC, thus supports network segmentation or merging." %}} -->
+{{</ col >}}
+
+{{</ multicol >}}
+
 
 ---
 
@@ -365,7 +387,19 @@ the _self-organizing coordination regions_ (SCR)<small>[4]</small> pattern.
 
 {{< multicol >}}
 {{< col >}}
-<img src="images/oneRootWithIndex.gif" alt="One root sequence">
+<div class="r-stack">
+<img 
+  class=""
+  src="images/oneRootWithIndex.gif" 
+  alt="One root sequence">
+  <img
+    class="fragment current-visible"
+    data-fragment-index="1"
+    src="images/oneroot20.png"
+    width="180%"
+    height="170%"
+  />
+</div>
 {{</ col >}}
 
 {{% col %}}
@@ -390,7 +424,16 @@ and stabilizes.
 
 {{< multicol >}}
 {{< col >}}
-<img src="images/cuttingWithIndex.gif" alt="One root sequence">
+<div class="r-stack">
+<img src="images/cuttingWithIndex.gif" alt="cutting sequence">
+  <img
+    class="fragment current-visible"
+    data-fragment-index="1"
+    src="images/cutting27.png"
+    width="180%"
+    height="170%"
+  />
+</div>
 {{</ col >}}
 
 {{% col %}}
@@ -416,7 +459,16 @@ Then the two sub-systems restabilize independently.
 
 {{< multicol >}}
 {{< col >}}
-<img src="images/graftWithIndex.gif" alt="One root sequence">
+<div class="r-stack">
+<img src="images/graftWithIndex.gif" alt="graft sequence">
+  <img
+    class="fragment current-visible"
+    data-fragment-index="1"
+    src="images/graft23.png"
+    width="180%"
+    height="170%"
+  />
+</div>
 {{</ col >}}
 
 {{% col %}}
@@ -439,7 +491,15 @@ A new system is created, with the resources shared among the nodes differently.
 
 {{< multicol >}}
 {{< col >}}
-<img src="images/graftWithMoreLeadersWithIndex.gif" alt="One root sequence">
+<div class="r-stack">
+<img src="images/graftWithIndex.gif" alt="One root sequence">
+  <img
+    class="fragment current-visible"
+    src="images/graftWithMoreLeaders38.png"
+    width="190%"
+    height="180%"
+  />
+</div>
 {{</ col >}}
 
 {{% col %}}
@@ -462,10 +522,17 @@ and the subregions change based on their potential new leaders.
 ---
 
 # Application example: **Abscission and regrowth**
-
 {{< multicol >}}
 {{< col >}}
-<img src="images/graftWithSpawningWithIndex.gif" alt="One root sequence">
+<div class="r-stack">
+<img src="images/graftWithSpawningWithIndex.gif" alt="graft with spawning sequence">
+  <img
+    class="fragment current-visible"
+    src="images/graftWithSpawning60.png"
+    width="180%"
+    height="170%"
+  />
+</div>
 {{</ col >}}
 
 {{% col %}}
@@ -484,11 +551,11 @@ optimizing the balance between resources and success.
 
 ---
 
-# Conclusions
+# Conclusion & Future works
 
 The approach enables to express morphogenetic algorithm by a **macroscopic perspective** via aggregate computing.
 
-Possible future directions:
+Possible **future directions**:
 
 - Inspect more **dynamics** and **complex organizational scenarios**;
 - Development of a **software library** of _aggregate morphogenetic blocks_;
