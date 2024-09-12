@@ -81,10 +81,10 @@ and
 
 </span>
 
-<span class="fragment "><h2 id="a-runtime-generated-hierarchical-structure"><strong>A runtime-generated hierarchical structure</strong></h2>
+<span class="fragment "><h2 id="runtime-generated-hierarchical-structure"><strong>runtime-generated hierarchical structure</strong></h2>
 </span>
 </section><section>
-<h1 id="the-vascular-morphogenesis-controller">The Vascular Morphogenesis Controller</h1>
+<h1 id="vascular-morphogenesis-controller-vmcsmall1small">Vascular Morphogenesis Controller (<strong>VMC</strong>)<small>[1]</small></h1>
 
 <div class="container w-100 m-0 p-0">
     <div class="row ">
@@ -92,13 +92,13 @@ and
 
 
 <div class="col col-8">
-<p class="fragment" data-fragment-index="0">The <b>VMC</b><small>[1]</small> is a model for the growth of artificial structures over time.</p>
-<p class="fragment" data-fragment-index="1">It models <b>tree-like structures</b>, in which every node can get information from the environment.</p>
+<p class="fragment" data-fragment-index="0">A model for the growth of artificial structures over time.</p>
+<p class="fragment" data-fragment-index="1">Works on <b>tree-like structures</b>, in which every node can get information from the environment.</p>
 <p class="fragment" data-fragment-index="2">The leaves of the tree start by sending the amount of <b>success</b> they sense to the root.</p>
-<p class="fragment" data-fragment-index="3">The root then sends back an amount of <b>resources</b> based on the success received from the leaves, regulating the tickness of their connections.</p>
-<h3 class="fragment" data-fragment-index="4"><i class="fa-solid fa-arrow-right"></i> But it has some limitations</h3>
-<p class="fragment" data-fragment-index="5"><i class="fa-solid fa-triangle-exclamation"></i>VMC assumes strict <b>synchronous operations</b>.</p>
-<p class="fragment" data-fragment-index="11"><i class="fa-solid fa-triangle-exclamation"></i> VMC assumes that organizations have <b>only</b> a tree structure.</p>
+<p class="fragment" data-fragment-index="3">The root sends back an amount of <b>resources</b> based on the success received from the leaves, regulating the tickness of their connections.</p>
+<h3 class="fragment" data-fragment-index="4"><i class="fa-solid fa-arrow-right"></i> Limitations</h3>
+<p class="fragment" data-fragment-index="5"><i class="fa-solid fa-triangle-exclamation"></i><b> Implicitly synchronous</b>.</p>
+<p class="fragment" data-fragment-index="11"><i class="fa-solid fa-triangle-exclamation"></i> Requires an <b> underlying tree structure</b> (can't work on graphs).</p>
 <!-- <p class = "fragment" data-fragment-index="12"><i class="fa-solid fa-angles-right"></i>Could restricts the model usefulness, leading to <b>abstraction gaps</b>.</p> -->
 </div>
 
@@ -135,8 +135,25 @@ and
 </small>
 </div>
 </section><section>
-<h1 id="a-possible-solution">A Possible Solution?</h1>
-<p>An implementation as a <strong>Field-based</strong><small>[2]</small> computation with the <strong>Aggregate Computing</strong><small>[3]</small> paradigm!</p>
+<h1 id="a-possible-solution">A Possible Solution</h1>
+<p>Porting VMC into a framework that by-design:</p>
+<ol>
+<li>supports <strong>graph structures</strong> and</li>
+<li>features <strong>asynchronous</strong> computations.</li>
+</ol>
+
+
+<span class="fragment ">
+  <p>If the implementation is feasible,
+it will automatically overcome the limitations of the original model.</p>
+
+</span>
+
+</section><section>
+<h1 id="meet-aggregate-computingsmall3small">Meet Aggregate Computing<small>[3]</small></h1>
+<img src="./images/acDevices.svg" width="70%">
+<p>A macro-programming approach that defines the <strong>collective behavior</strong> of heterogeneous devices in a <strong>self-organizing system</strong>.</p>
+<p>Based on the Field Calculus<small>[2]</small>, operates by manipulating distributed data structures called <em>fields</em>.</p>
 <div>
 <small style="text-align: left">
 [2] Viroli, M., Beal, J., Damiani, F., Audrito, G., Casadei, R., Pianini, D. "From distributed coordination to field calculus and aggregate computing." 2019.<br>
@@ -144,12 +161,7 @@ and
 </small>
 </div>
 </section><section>
-<h1 id="what-is-aggregate-computing">What is Aggregate Computing?</h1>
-<img src="./images/acDevices.svg" width="70%">
-<p>A macro-programming approach that defines the <strong>collective behavior</strong> of heterogeneous devices in a <strong>self-organizing system</strong>.</p>
-<p>Based on Field Calculus abstractions, it operates in terms of <em>field</em>: a distributed data structure.</p>
-</section><section>
-<h1 id="the-aggregate-vascular-morphogenesis-controller">The <strong>Aggregate</strong> Vascular Morphogenesis Controller</h1>
+<h1 id="fieldvmc-aggregate-computing-based-vmc"><code>FieldVMC</code>: <strong>Aggregate Computing</strong>-based VMC</h1>
 <h2 id="model">Model</h2>
 
 <div class="container w-100 m-0 p-0">
@@ -158,10 +170,10 @@ and
 
 
 <div class="col col-8">
-<p class="fragment" data-fragment-index="0">A node represents an <b>agent</b>.</p>
-<p class="fragment" data-fragment-index="1">A neighboring link denotes the possibility of two agents to <b>communicate</b>.</p>
-<p class="fragment" data-fragment-index="2">Each agent is assumed to have <b>sensors</b>:<br><em>success, resource, position and distance.</em></p>
-<p class="fragment" data-fragment-index="3">And <b>actuators</b>:<br><em>spawning and destroying.</em></p>
+<p class="fragment" data-fragment-index="0">Nodes can <b>compute</b>.</p>
+<p class="fragment" data-fragment-index="1">Neighboring nodes can <b>communicate</b>.</p>
+<p class="fragment" data-fragment-index="2">Nodes have <b>sensors</b>:<br><em>success, resource, distance, and optionally position.</em></p>
+<p class="fragment" data-fragment-index="3">Nodes have optional <b>actuators</b>:<br><em>spawning and destroying.</em></p>
 
 </div>
 
@@ -178,7 +190,7 @@ and
 </div>
 </div>
 </section><section>
-<h1 id="the-aggregate-vascular-morphogenesis-controller-1">The <strong>Aggregate</strong> Vascular Morphogenesis Controller</h1>
+<h1 id="the-aggregate-vascular-morphogenesis-controller">The <strong>Aggregate</strong> Vascular Morphogenesis Controller</h1>
 <h2 id="implementation">Implementation</h2>
 
 <div class="container w-100 m-0 p-0">
@@ -186,17 +198,16 @@ and
 
 
 
-<div class="col text-start col-md-7"><p>Structures as <b>graphs</b> are supported.</p>
-<p>Use of <em>self-organizing coordination regions</em><small>[4]</small> pattern to define the forward and backward flows of resources and success.</p>
-<p class="fragment" data-fragment-index="0">Given a network of devices, the <b>SCR</b> pattern performs <b>simultaneously</b> four steps:</p>
+<div class="col text-start col-md-7"><p>(multiple) <strong>Trees</strong> are built on top of <strong>arbitrary networks</strong> using
+the <em>self-organizing coordination regions</em> (SCR)<small>[4]</small> pattern.</p>
+<p class="fragment" data-fragment-index="0"><b>SCR</b> performs <b>continuously</b>:</p>
 <ol>
-  <li class="fragment" data-fragment-index="1">Elects sparse <b>leaders</b> among candidates;</li>
-  <li class="fragment" data-fragment-index="3">Evolves <b>regions</b> from leaders;</li>
-  <li class="fragment" data-fragment-index="4">Creates <b>upstream</b> information <b>flows</b> towards the leader;</li>
-  <li class="fragment" data-fragment-index="5">Performs <b>decision-making</b> at the leader and <b>downstream decisions</b>.</li>
+  <li class="fragment" data-fragment-index="1">Sparse <b>leader election</b>;</li>
+  <li class="fragment" data-fragment-index="3"><b>Control region expansion</b> from leaders;</li>
+  <li class="fragment" data-fragment-index="4"><b>upstream</b> information <b>flows</b> construction;</li>
+  <li class="fragment" data-fragment-index="5"><b>decision-making</b> and <b>downstream propagation</b>.</li>
 </ol>
-<p class="fragment" data-fragment-index="6">Hence supporting <b>multiple trees</b> and a <b>dynamic</b>, <b>resilient set of trees</b>.</p><p>
-</p></div>
+</div>
 
 
 
@@ -223,7 +234,7 @@ and
 <!-- open source, soon in standard lib -> pattern organizzativi che prima non c'erano -->
 <!-- validation made by qualitative approach -->
 </section><section>
-<h1 id="the-aggregate-vascular-morphogenesis-controller-2">The <strong>Aggregate</strong> Vascular Morphogenesis Controller</h1>
+<h1 id="the-aggregate-vascular-morphogenesis-controller-1">The <strong>Aggregate</strong> Vascular Morphogenesis Controller</h1>
 <h2 id="supported-features">Supported features</h2>
 <ul style="margin-left: 3em; margin-right: 3em;">
   <li class="fragment" data-fragment-index="1"><strong>Multiple leaders</strong>: allowing easier management of large network by splitting them in sub-systems;</li>
