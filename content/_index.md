@@ -26,12 +26,12 @@ and
 
 {{< multicol>}}
 
-{{< col >}}
-{{% fragment %}}
+{{% col %}}
+
 ### Plants
 ![plant image](images/plant-svgrepo-com.svg)
-{{%/ fragment %}}
-{{</ col >}}
+
+{{% /col %}}
 
 {{< col >}}
 {{% fragment %}}
@@ -57,7 +57,7 @@ and
 
 ---
 
-# The Vascular Morphogenesis Controller 
+# The Vascular Morphogenesis Controller
 
 {{< multicol >}}
 
@@ -170,7 +170,7 @@ and
 {{</ multicol >}}
 
 <div>
-<small style="text-align: left"> 
+<small style="text-align: left">
 <p class = "fragment" data-fragment-index="0">[1] Zahadat, P., Hofstadler, D.N., Schmickl, T. "Morphogenesis as a Collective Decision of Agents Competing for Limited Resource: A Plants Approach." 2018.</p>
 </small>
 </div>
@@ -182,10 +182,10 @@ and
 An implementation as a **Field-based**<small>[2]</small> computation with the **Aggregate Computing**<small>[3]</small> paradigm!
 
 <div>
-<small style="text-align: left"> 
+<small style="text-align: left">
 [2] Viroli, M., Beal, J., Damiani, F., Audrito, G., Casadei, R., Pianini, D. "From distributed coordination to field calculus and aggregate computing." 2019.</br>
 [3] Beal, J., Pianini, D., Viroli, M. "Aggregate Programming for the Internet of Things." 2015.
-</small> 
+</small>
 </div>
 
 ---
@@ -198,7 +198,7 @@ A macro-programming approach that defines the **collective behavior** of heterog
 
 Based on Field Calculus abstractions, it operates in terms of *field*: a distributed data structure.
 
---- 
+---
 
 # The **Aggregate** Vascular Morphogenesis Controller
 
@@ -258,7 +258,7 @@ Based on Field Calculus abstractions, it operates in terms of *field*: a distrib
 
 {{% col class="text-start col-md-7" %}}
 
-Structures as <b>graphs</b> are supported. 
+Structures as <b>graphs</b> are supported.
 
 Use of _self-organizing coordination regions_<small>[4]</small> pattern to define the forward and backward flows of resources and success.
 
@@ -331,9 +331,9 @@ Use of _self-organizing coordination regions_<small>[4]</small> pattern to defin
 
 
 <div>
-<small style="text-align: left"> 
+<small style="text-align: left">
 [4] Casadei, R., Pianini, D., Viroli, M., Natali, A. "Self-organising Coordination Regions: A Pattern for Edge Computing." 2019.
-</small> 
+</small>
 </div>
 
 <!-- SCR addresses problem decomposition and task assignment in distributed settings by: (i) electing sparse lead- ers; (ii) evolving regions from leaders; (iii) creating upstream information flows [14] towards the leader; (iv) performing decision-making at the leader and downstreaming decisions. -->
@@ -347,7 +347,7 @@ Use of _self-organizing coordination regions_<small>[4]</small> pattern to defin
 
 # The **Aggregate** Vascular Morphogenesis Controller
 
-## Supported features 
+## Supported features
 
 <ul style="margin-left: 3em; margin-right: 3em;">
   <li class="fragment" data-fragment-index="1"><strong>Multiple leaders</strong>: allowing easier management of large network by splitting them in sub-systems;</li>
@@ -355,7 +355,7 @@ Use of _self-organizing coordination regions_<small>[4]</small> pattern to defin
   <li class="fragment" data-fragment-index="3"><strong>Merge and split</strong>: ihnerits <em>self-organizing</em> capabilities from AC, thus supports network segmentation or merging.</li>
 </ul>
 
---- 
+---
 
 # Application example: **Germination**
 
@@ -368,8 +368,8 @@ Use of _self-organizing coordination regions_<small>[4]</small> pattern to defin
 ## Self-Construction
 Starts from a single node **with** spawning and destroying policies.
 
-The first node self-elects as root and spawns new nodes. 
-When a new one is in a better position, it gets elected as root. 
+The first node self-elects as root and spawns new nodes.
+When a new one is in a better position, it gets elected as root.
 
 In this way the system goes towards better resources.
 
@@ -397,7 +397,7 @@ Starts from a network filled with nodes able to communicate with others within a
 
 The structure elects a leader, that results to be the one nearest the resources source.
 
-Once the system has stabilized, all the nodes at the center of the structure are removed, 
+Once the system has stabilized, all the nodes at the center of the structure are removed,
 creating two different non-communicating sub-systems.
 
 Then the two sub-systems restabilize independently.
@@ -420,7 +420,7 @@ Then the two sub-systems restabilize independently.
 
 Starts from two non-communicating systems, **without** spawn and destroy policies.
 
-After the two systems have stabilized, 
+After the two systems have stabilized,
 they are merged.
 
 A new system is created, with the resources shared among the nodes differently.
@@ -443,11 +443,11 @@ A new system is created, with the resources shared among the nodes differently.
 
 Starts from two non-communicating systems **without** spawn and destroy policies.
 
-The influence radius of a leader is reduced, 
-in a way each system **elects more than one leader**, 
+The influence radius of a leader is reduced,
+in a way each system **elects more than one leader**,
 therefore **dividing itself into subregions**.
 
-After their stabilization, 
+After their stabilization,
 the two systems are merged,
 and the subregions change based on their potential new leaders.
 
@@ -469,10 +469,10 @@ and the subregions change based on their potential new leaders.
 
 Starts from two non-communicating substructures **with** spawn and destroy policies.
 
-Firstly, the two substructures are optimized, 
+Firstly, the two substructures are optimized,
 then they get connected due to the spawning of new nodes.
 
-The new global structure reshapes, 
+The new global structure reshapes,
 optimizing the balance between resources and success.
 {{%/ col %}}
 
@@ -480,7 +480,7 @@ optimizing the balance between resources and success.
 
 ---
 
-# Conclusions 
+# Conclusions
 
 The approach enables to express morphogenetic algorithm by a **macroscopic perspective** via aggregate computing.
 
