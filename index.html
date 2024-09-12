@@ -8,7 +8,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="/presentation-2024-acsos-fieldVMC/reveal-js/dist/reset.css">
 <link rel="stylesheet" href="/presentation-2024-acsos-fieldVMC/reveal-js/dist/reveal.css">
-  <link rel="stylesheet" href="/presentation-2024-acsos-fieldVMC/css/custom-theme.min.1aab8312f9bf376a02610aa9e3d643351be6f730a5bb17b1905d011ffa2cd3f4.css" id="theme"><link rel="stylesheet" href="/presentation-2024-acsos-fieldVMC/highlight-js/solarized-dark.min.css">
+  <link rel="stylesheet" href="/presentation-2024-acsos-fieldVMC/css/custom-theme.min.6664ee181d2f7230af6b4b6896f87917d4436de9603734fcf15e3355d1152b1a.css" id="theme"><link rel="stylesheet" href="/presentation-2024-acsos-fieldVMC/highlight-js/solarized-dark.min.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto Mono" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Oxygen Mono" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Ubuntu Mono" rel="stylesheet">
@@ -150,14 +150,14 @@ it will automatically overcome the limitations of the original model.</p>
 </span>
 
 </section><section>
-<h1 id="meet-aggregate-computingsmall3small">Meet Aggregate Computing<small>[3]</small></h1>
+<h1 id="meet-aggregate-computingsmall2small">Meet Aggregate Computing<small>[2]</small></h1>
 <img src="./images/acDevices.svg" width="70%">
 <p>A macro-programming approach that defines the <strong>collective behavior</strong> of heterogeneous devices in a <strong>self-organizing system</strong>.</p>
-<p>Based on the Field Calculus<small>[2]</small>, operates by manipulating distributed data structures called <em>fields</em>.</p>
+<p>Based on the <strong>Field Calculus</strong><small>[3]</small>, operates by manipulating distributed data structures called <em>fields</em>.</p>
 <div>
 <small style="text-align: left">
-[2] Viroli, M., Beal, J., Damiani, F., Audrito, G., Casadei, R., Pianini, D. "From distributed coordination to field calculus and aggregate computing." 2019.<br>
-[3] Beal, J., Pianini, D., Viroli, M. "Aggregate Programming for the Internet of Things." 2015.
+[2] Beal, J., Pianini, D., Viroli, M. "Aggregate Programming for the Internet of Things." 2015.<br>
+[3] Audrito, G., Viroli, M., Damiani, F., Pianini, D., Beal, J. "A Higher-Order Calculus of Computational Fields." 2019.
 </small>
 </div>
 </section><section>
@@ -170,7 +170,7 @@ it will automatically overcome the limitations of the original model.</p>
 
 
 <div class="col col-8">
-<p class="fragment" data-fragment-index="0">Nodes can <b>compute</b>.</p>
+Nodes can <b>compute</b>
 <p class="fragment" data-fragment-index="1">Neighboring nodes can <b>communicate</b>.</p>
 <p class="fragment" data-fragment-index="2">Nodes have <b>sensors</b>:<br><em>success, resource, distance, and optionally position.</em></p>
 <p class="fragment" data-fragment-index="3">Nodes have optional <b>actuators</b>:<br><em>spawning and destroying.</em></p>
@@ -181,7 +181,7 @@ it will automatically overcome the limitations of the original model.</p>
 
 <div class="col ">
 <div class="r-stack">
-  <img class="fragment current-visible" data-fragment-index="0" src="images/agent.svg" width="100%" height="100%">
+  <img class="current-visible" data-fragment-index="0" src="images/agent.svg" width="100%" height="100%">
   <img class="fragment current-visible" data-fragment-index="1" src="images/connection.svg" width="180%" height="170%">
   <img class="fragment current-visible" data-fragment-index="2" src="images/sensors.svg" width="180%" height="170%">
   <img class="fragment current-visible" data-fragment-index="3" src="images/actuators.svg" width="180%" height="170%">
@@ -190,7 +190,7 @@ it will automatically overcome the limitations of the original model.</p>
 </div>
 </div>
 </section><section>
-<h1 id="the-aggregate-vascular-morphogenesis-controller">The <strong>Aggregate</strong> Vascular Morphogenesis Controller</h1>
+<h1 id="fieldvmc-aggregate-computing-based-vmc-1"><code>FieldVMC</code>: <strong>Aggregate Computing</strong>-based VMC</h1>
 <h2 id="implementation">Implementation</h2>
 
 <div class="container w-100 m-0 p-0">
@@ -204,8 +204,8 @@ the <em>self-organizing coordination regions</em> (SCR)<small>[4]</small> patter
 <ol>
   <li class="fragment" data-fragment-index="1">Sparse <b>leader election</b>;</li>
   <li class="fragment" data-fragment-index="3"><b>Control region expansion</b> from leaders;</li>
-  <li class="fragment" data-fragment-index="4"><b>upstream</b> information <b>flows</b> construction;</li>
-  <li class="fragment" data-fragment-index="5"><b>decision-making</b> and <b>downstream propagation</b>.</li>
+  <li class="fragment" data-fragment-index="4"><b>Upstream</b> information <b>flows</b> construction;</li>
+  <li class="fragment" data-fragment-index="5"><b>Decision-making</b> and <b>downstream propagation</b>.</li>
 </ol>
 </div>
 
@@ -215,8 +215,7 @@ the <em>self-organizing coordination regions</em> (SCR)<small>[4]</small> patter
   <img class=" current-visible" src="images/network-1.svg" width="100%" height="100%">
   <img class="fragment current-visible" data-fragment-index="1" src="images/network-candidates.svg" width="180%" height="170%">
   <img class="fragment current-visible" data-fragment-index="2" src="images/network-leaders.svg" width="180%" height="170%">
-  <img class="fragment current-visible" data-fragment-index="3" src="images/network-regions.svg" width="180%" height="170%">
-    <img class="fragment current-visible" data-fragment-index="4" src="images/network-upstream.svg" width="180%" height="170%">
+  <img class="fragment current-visible" data-fragment-index="3" src="images/network-regions.svg" width="180%" height="170%" <img="">
     <img class="fragment current-visible" data-fragment-index="5" src="images/network-downstream2.svg" width="180%" height="170%">
   <img class="fragment current-visible" data-fragment-index="6" src="images/network-downstream2.svg" width="180%" height="170%">
 </div>
@@ -234,13 +233,51 @@ the <em>self-organizing coordination regions</em> (SCR)<small>[4]</small> patter
 <!-- open source, soon in standard lib -> pattern organizzativi che prima non c'erano -->
 <!-- validation made by qualitative approach -->
 </section><section>
-<h1 id="the-aggregate-vascular-morphogenesis-controller-1">The <strong>Aggregate</strong> Vascular Morphogenesis Controller</h1>
-<h2 id="supported-features">Supported features</h2>
-<ul style="margin-left: 3em; margin-right: 3em;">
-  <li class="fragment" data-fragment-index="1"><strong>Multiple leaders</strong>: allowing easier management of large network by splitting them in sub-systems;</li>
-  <li class="fragment" data-fragment-index="2"><strong>Growth and shrink</strong>: different implementations of <em>spawning/destroying</em> strategies can lead to different structures.<br>
-  </li><li class="fragment" data-fragment-index="3"><strong>Merge and split</strong>: ihnerits <em>self-organizing</em> capabilities from AC, thus supports network segmentation or merging.</li>
+<h1 id="fieldvmc-aggregate-computing-based-vmc-2"><code>FieldVMC</code>: <strong>Aggregate Computing</strong>-based VMC</h1>
+
+<div class="container w-100 m-0 p-0">
+    <div class="row ">
+
+
+
+<div class="col ">
+<h2>Functioning</h2>
+<ol>
+  <li><strong>Leader</strong>(s) are chosen <strong>dynamically</strong> based on resource availability;</li>
+  <li class="fragment" data-fragment-index="1">A <strong>gradient field</strong> defines zones around each leader, organized by distance to their nearest leader;</li>
+  <li class="fragment" data-fragment-index="2"><strong>Nodes send data to their leader</strong>, forming a hierarchical tree;</li>
+  <li class="fragment" data-fragment-index="3">Leaders <strong>distribute resources</strong> based on node performance;</li>
+  <li class="fragment" data-fragment-index="4">Nodes <strong>act based on resources and success</strong>, spawning new nodes or self-destructing.</li>
+</ol>
+</div>
+
+
+
+<div class="col ">
+<h3 class="fragment" data-fragment-index="5"> Supported features</h3>
+
+<ul>
+  <li class="fragment" data-fragment-index="6"><strong>Multiple leaders</strong>: allowing easier management of large network by splitting them in sub-systems;</li>
+  <li class="fragment" data-fragment-index="7"><strong>Growth and shrink</strong>: different implementations of <em>spawning/destroying</em> strategies can lead to different structures.<br>
+  </li><li class="fragment" data-fragment-index="8"><strong>Merge and split</strong>: ihnerits <em>self-organizing</em> capabilities from AC, thus supports network segmentation or merging.</li>
 </ul>
+<!-- <span class='fragment ' ><h3>Supported features</h3></span>
+<span class='fragment ' ><ul>
+<li><strong>Multiple leaders</strong>: allowing easier management of large network by splitting them in sub-systems;</li>
+</ul>
+</span>
+<span class='fragment ' ><ul>
+<li><strong>Growth and shrink</strong>: different implementations of <em>spawning/destroying</em> strategies can lead to different structures;</li>
+</ul>
+</span>
+<span class='fragment ' ><ul>
+<li><strong>Merge and split</strong>: inherits <em>self-organizing</em> capabilities from AC, thus supports network segmentation or merging.</li>
+</ul>
+</span> -->
+</div>
+
+</div>
+</div>
 </section><section>
 <h1 id="application-example-germination">Application example: <strong>Germination</strong></h1>
 
@@ -249,7 +286,10 @@ the <em>self-organizing coordination regions</em> (SCR)<small>[4]</small> patter
 
 
 <div class="col ">
-<img src="images/oneRootWithIndex.gif" alt="One root sequence">
+<div class="r-stack">
+<img class="" src="images/oneRootWithIndex.gif" alt="One root sequence">
+  <img class="fragment current-visible" data-fragment-index="1" src="images/oneroot20.png" width="180%" height="170%">
+</div>
 </div>
 
 
@@ -273,7 +313,10 @@ and stabilizes.</p>
 
 
 <div class="col ">
-<img src="images/cuttingWithIndex.gif" alt="One root sequence">
+<div class="r-stack">
+<img src="images/cuttingWithIndex.gif" alt="cutting sequence">
+  <img class="fragment current-visible" data-fragment-index="1" src="images/cutting27.png" width="180%" height="170%">
+</div>
 </div>
 
 
@@ -297,7 +340,10 @@ creating two different non-communicating sub-systems.</p>
 
 
 <div class="col ">
-<img src="images/graftWithIndex.gif" alt="One root sequence">
+<div class="r-stack">
+<img src="images/graftWithIndex.gif" alt="graft sequence">
+  <img class="fragment current-visible" data-fragment-index="1" src="images/graft23.png" width="180%" height="170%">
+</div>
 </div>
 
 
@@ -319,7 +365,10 @@ they are merged.</p>
 
 
 <div class="col ">
-<img src="images/graftWithMoreLeadersWithIndex.gif" alt="One root sequence">
+<div class="r-stack">
+<img src="images/graftWithIndex.gif" alt="One root sequence">
+  <img class="fragment current-visible" src="images/graftWithMoreLeaders38.png" width="190%" height="180%">
+</div>
 </div>
 
 
@@ -344,7 +393,10 @@ and the subregions change based on their potential new leaders.</p>
 
 
 <div class="col ">
-<img src="images/graftWithSpawningWithIndex.gif" alt="One root sequence">
+<div class="r-stack">
+<img src="images/graftWithSpawningWithIndex.gif" alt="graft with spawning sequence">
+  <img class="fragment current-visible" src="images/graftWithSpawning60.png" width="180%" height="170%">
+</div>
 </div>
 
 
@@ -360,9 +412,9 @@ optimizing the balance between resources and success.</p>
 </div>
 </div>
 </section><section>
-<h1 id="conclusions">Conclusions</h1>
+<h1 id="conclusion--future-works">Conclusion &amp; Future works</h1>
 <p>The approach enables to express morphogenetic algorithm by a <strong>macroscopic perspective</strong> via aggregate computing.</p>
-<p>Possible future directions:</p>
+<p>Possible <strong>future directions</strong>:</p>
 <ul>
 <li>Inspect more <strong>dynamics</strong> and <strong>complex organizational scenarios</strong>;</li>
 <li>Development of a <strong>software library</strong> of <em>aggregate morphogenetic blocks</em>;</li>
