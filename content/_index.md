@@ -53,22 +53,22 @@ and
 # What do they have in common?
 {{%/ fragment %}}
 
-{{< frag c="## **A runtime-generated hierarchical structure**" >}}
+{{< frag c="## **runtime-generated hierarchical structure**" >}}
 
 ---
 
-# The Vascular Morphogenesis Controller
+# Vascular Morphogenesis Controller (**VMC**)<small>[1]</small>
 
 {{< multicol >}}
 
 {{< col class="col-8">}}
-<p class = "fragment" data-fragment-index="0">The <b>VMC</b><small>[1]</small> is a model for the growth of artificial structures over time.</p>
-<p class = "fragment" data-fragment-index="1">It models <b>tree-like structures</b>, in which every node can get information from the environment.</p>
+<p class = "fragment" data-fragment-index="0">A model for the growth of artificial structures over time.</p>
+<p class = "fragment" data-fragment-index="1">Works on <b>tree-like structures</b>, in which every node can get information from the environment.</p>
 <p class = "fragment" data-fragment-index="2">The leaves of the tree start by sending the amount of <b>success</b> they sense to the root.</p>
-<p class = "fragment" data-fragment-index="3">The root then sends back an amount of <b>resources</b> based on the success received from the leaves, regulating the tickness of their connections.</p>
-<h3 class = "fragment" data-fragment-index="4"><i class="fa-solid fa-arrow-right"></i> But it has some limitations</h3>
-<p class = "fragment" data-fragment-index="5"><i class="fa-solid fa-triangle-exclamation"></i>VMC assumes strict <b>synchronous operations</b>.</p>
-<p class = "fragment" data-fragment-index="11"><i class="fa-solid fa-triangle-exclamation"></i> VMC assumes that organizations have <b>only</b> a tree structure.</p>
+<p class = "fragment" data-fragment-index="3">The root sends back an amount of <b>resources</b> based on the success received from the leaves, regulating the tickness of their connections.</p>
+<h3 class = "fragment" data-fragment-index="4"><i class="fa-solid fa-arrow-right"></i> Limitations</h3>
+<p class = "fragment" data-fragment-index="5"><i class="fa-solid fa-triangle-exclamation"></i><b> Implicitly synchronous</b>.</p>
+<p class = "fragment" data-fragment-index="11"><i class="fa-solid fa-triangle-exclamation"></i> Requires an <b> underlying tree structure</b> (can't work on graphs).</p>
 <!-- <p class = "fragment" data-fragment-index="12"><i class="fa-solid fa-angles-right"></i>Could restricts the model usefulness, leading to <b>abstraction gaps</b>.</p> -->
 {{</ col >}}
 
@@ -177,9 +177,26 @@ and
 
 ---
 
-# A Possible Solution?
+# A Possible Solution
 
-An implementation as a **Field-based**<small>[2]</small> computation with the **Aggregate Computing**<small>[3]</small> paradigm!
+Porting VMC into a framework that by-design:
+1. supports **graph structures** and
+2. features **asynchronous** computations.
+
+{{% fragment %}}
+If the implementation is feasible,
+it will automatically overcome the limitations of the original model.
+{{%/ fragment %}}
+
+---
+
+# Meet Aggregate Computing<small>[3]</small>
+
+<img src="./images/acDevices.svg" width=70%>
+
+A macro-programming approach that defines the **collective behavior** of heterogeneous devices in a **self-organizing system**.
+
+Based on the Field Calculus<small>[2]</small>, operates by manipulating distributed data structures called *fields*.
 
 <div>
 <small style="text-align: left">
@@ -190,27 +207,17 @@ An implementation as a **Field-based**<small>[2]</small> computation with the **
 
 ---
 
-# What is Aggregate Computing?
-
-<img src="./images/acDevices.svg" width=70%>
-
-A macro-programming approach that defines the **collective behavior** of heterogeneous devices in a **self-organizing system**.
-
-Based on Field Calculus abstractions, it operates in terms of *field*: a distributed data structure.
-
----
-
-# The **Aggregate** Vascular Morphogenesis Controller
+# `FieldVMC`: **Aggregate Computing**-based VMC
 
 ## Model
 
 {{< multicol >}}
 
 {{< col class="col-8">}}
-<p class = "fragment" data-fragment-index="0">A node represents an <b>agent</b>.</p>
-<p class = "fragment" data-fragment-index="1">A neighboring link denotes the possibility of two agents to <b>communicate</b>.</p>
-<p class = "fragment" data-fragment-index="2">Each agent is assumed to have <b>sensors</b>:</br><em>success, resource, position and distance.</em></p>
-<p class = "fragment" data-fragment-index="3">And <b>actuators</b>:</br><em>spawning and destroying.</em></p>
+<p class = "fragment" data-fragment-index="0">Nodes can <b>compute</b>.</p>
+<p class = "fragment" data-fragment-index="1">Neighboring nodes can <b>communicate</b>.</p>
+<p class = "fragment" data-fragment-index="2">Nodes have <b>sensors</b>:</br><em>success, resource, distance, and optionally position.</em></p>
+<p class = "fragment" data-fragment-index="3">Nodes have optional <b>actuators</b>:</br><em>spawning and destroying.</em></p>
 
 {{</ col >}}
 
@@ -258,19 +265,16 @@ Based on Field Calculus abstractions, it operates in terms of *field*: a distrib
 
 {{% col class="text-start col-md-7" %}}
 
-Structures as <b>graphs</b> are supported.
+(multiple) **Trees** are built on top of **arbitrary networks** using
+the _self-organizing coordination regions_ (SCR)<small>[4]</small> pattern.
 
-Use of _self-organizing coordination regions_<small>[4]</small> pattern to define the forward and backward flows of resources and success.
-
-<p class = "fragment" data-fragment-index="0">Given a network of devices, the <b>SCR</b> pattern performs <b>simultaneously</b> four steps:</p>
+<p class = "fragment" data-fragment-index="0"><b>SCR</b> performs <b>continuously</b>:</p>
 <ol>
-  <li class="fragment" data-fragment-index="1">Elects sparse <b>leaders</b> among candidates;</li>
-  <li class="fragment" data-fragment-index="3">Evolves <b>regions</b> from leaders;</li>
-  <li class="fragment" data-fragment-index="4">Creates <b>upstream</b> information <b>flows</b> towards the leader;</li>
-  <li class="fragment" data-fragment-index="5">Performs <b>decision-making</b> at the leader and <b>downstream decisions</b>.</li>
+  <li class="fragment" data-fragment-index="1">Sparse <b>leader election</b>;</li>
+  <li class="fragment" data-fragment-index="3"><b>Control region expansion</b> from leaders;</li>
+  <li class="fragment" data-fragment-index="4"><b>upstream</b> information <b>flows</b> construction;</li>
+  <li class="fragment" data-fragment-index="5"><b>decision-making</b> and <b>downstream propagation</b>.</li>
 </ol>
-
-<p class="fragment" data-fragment-index="6">Hence supporting <b>multiple trees</b> and a <b>dynamic</b>, <b>resilient set of trees</b>.<p>
 
 {{%/ col %}}
 
