@@ -558,6 +558,6 @@ Possible **future directions**:
 ---
 
 
-## Reproducible examples here!
+## Reproducible experiments here!
 
 <img src="images/vmc-qr.svg" alt="Examples repo">
