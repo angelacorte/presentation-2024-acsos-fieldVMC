@@ -404,15 +404,7 @@ the _self-organizing coordination regions_ (SCR)<small>[4]</small> pattern.
 
 {{% col %}}
 ## Self-Construction
-Starts from a single node **with** spawning and destroying policies.
-
-The first node self-elects as root and spawns new nodes.
-When a new one is in a better position, it gets elected as root.
-
-In this way the system goes towards better resources.
-
-Then the system expands towards the success source as much as possible,
-and stabilizes.
+Creates a stable structure starting from a single node.
 
 {{%/ col %}}
 
@@ -439,15 +431,17 @@ and stabilizes.
 {{% col %}}
 ## Self-Repairing
 
-Starts from a network filled with nodes able to communicate with others within a specific range,
-**without** spawn or destroy policies.
+Stabilization in two different structures starting from a damaged one.
 
-The structure elects a leader, that results to be the one nearest the resources source.
+<!-- Starts from a network filled with nodes able to communicate with others within a specific range, -->
+<!-- **without** spawn or destroy policies. -->
 
-Once the system has stabilized, all the nodes at the center of the structure are removed,
-creating two different non-communicating sub-systems.
+<!-- The structure elects a leader, that results to be the one nearest the resources source. -->
 
-Then the two sub-systems restabilize independently.
+<!-- Once the system has stabilized, all the nodes at the center of the structure are removed, -->
+<!-- creating two different non-communicating sub-systems. -->
+
+<!-- Then the two sub-systems restabilize independently. -->
 
 {{%/ col %}}
 
@@ -474,12 +468,14 @@ Then the two sub-systems restabilize independently.
 {{% col %}}
 ## Self-Integration
 
-Starts from two non-communicating systems, **without** spawn and destroy policies.
+Merging of two different structures into a single one.
 
-After the two systems have stabilized,
-they are merged.
+<!-- Starts from two non-communicating systems, **without** spawn and destroy policies. -->
 
-A new system is created, with the resources shared among the nodes differently.
+<!-- After the two systems have stabilized, -->
+<!-- they are merged. -->
+
+<!-- A new system is created, with the resources shared among the nodes differently. -->
 
 {{%/ col %}}
 
@@ -505,15 +501,17 @@ A new system is created, with the resources shared among the nodes differently.
 {{% col %}}
 ## Self-Segmentation
 
-Starts from two non-communicating systems **without** spawn and destroy policies.
+Multiple independent subsystems from a single one.
 
-The influence radius of a leader is reduced,
-in a way each system **elects more than one leader**,
-therefore **dividing itself into subregions**.
+<!-- Starts from two non-communicating systems **without** spawn and destroy policies. -->
 
-After their stabilization,
-the two systems are merged,
-and the subregions change based on their potential new leaders.
+<!-- The influence radius of a leader is reduced, -->
+<!-- in a way each system **elects more than one leader**, -->
+<!-- therefore **dividing itself into subregions**. -->
+
+<!-- After their stabilization, -->
+<!-- the two systems are merged, -->
+<!-- and the subregions change based on their potential new leaders. -->
 
 {{%/ col %}}
 
@@ -538,13 +536,15 @@ and the subregions change based on their potential new leaders.
 {{% col %}}
 ## Self-Optimization
 
-Starts from two non-communicating substructures **with** spawn and destroy policies.
+Optimized merging of two different structures.
 
-Firstly, the two substructures are optimized,
-then they get connected due to the spawning of new nodes.
+<!-- Starts from two non-communicating substructures **with** spawn and destroy policies. -->
 
-The new global structure reshapes,
-optimizing the balance between resources and success.
+<!-- Firstly, the two substructures are optimized, -->
+<!-- then they get connected due to the spawning of new nodes. -->
+
+<!-- The new global structure reshapes, -->
+<!-- optimizing the balance between resources and success. -->
 {{%/ col %}}
 
 {{</ multicol >}}
