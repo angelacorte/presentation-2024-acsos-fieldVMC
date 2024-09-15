@@ -214,7 +214,7 @@ Based on the **Field Calculus**<small>[3]</small>, operates by manipulating dist
 {{< multicol >}}
 
 {{< col class="col-8">}}
-Nodes can <b>compute</b>
+<p class = "fragment" data-fragment-index="0">Nodes can <b>compute</b>.</p>
 <p class = "fragment" data-fragment-index="1">Neighboring nodes can <b>communicate</b>.</p>
 <p class = "fragment" data-fragment-index="2">Nodes have <b>sensors</b>:</br><em>success, resource, distance, and optionally position.</em></p>
 <p class = "fragment" data-fragment-index="3">Nodes have optional <b>actuators</b>:</br><em>spawning and destroying.</em></p>
@@ -224,7 +224,7 @@ Nodes can <b>compute</b>
 {{< col >}}
 <div class="r-stack">
   <img
-    class="current-visible"
+    class="fragment current-visible"
     data-fragment-index="0"
     src="images/agent.svg"
     width="100%"
@@ -306,7 +306,7 @@ the _self-organizing coordination regions_ (SCR)<small>[4]</small> pattern.
     src="images/network-regions.svg"
     width="180%"
     height="170%"
-  /
+  />
     <img
     class="fragment current-visible"
     data-fragment-index="4"
@@ -317,13 +317,6 @@ the _self-organizing coordination regions_ (SCR)<small>[4]</small> pattern.
     <img
     class="fragment current-visible"
     data-fragment-index="5"
-    src="images/network-downstream2.svg"
-    width="180%"
-    height="170%"
-  />
-  <img
-    class="fragment current-visible"
-    data-fragment-index="6"
     src="images/network-downstream2.svg"
     width="180%"
     height="170%"
