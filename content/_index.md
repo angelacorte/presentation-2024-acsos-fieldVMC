@@ -158,20 +158,13 @@ and
     width="180%"
     height="170%"
   />
-  <!-- <img
-    class="fragment current-visible"
-    data-fragment-index="12"
-    src="images/graph.svg"
-    width="180%"
-    height="170%"
-  /> -->
 </div>
 {{</ col >}}
 {{</ multicol >}}
 
 <div>
 <small style="text-align: left">
-<p class = "fragment" data-fragment-index="0">[1] Zahadat, P., Hofstadler, D.N., Schmickl, T. "Morphogenesis as a Collective Decision of Agents Competing for Limited Resource: A Plants Approach." 2018.</p>
+<p>[1] Zahadat, P., Hofstadler, D.N., Schmickl, T. "Morphogenesis as a Collective Decision of Agents Competing for Limited Resource: A Plants Approach." 2018.</p>
 </small>
 </div>
 
@@ -344,9 +337,9 @@ the _self-organizing coordination regions_ (SCR)<small>[4]</small> pattern.
 
 # `FieldVMC`: **Aggregate Computing**-based VMC
 
-{{< multicol >}}
+<!-- {{< multicol >}} -->
 
-{{< col >}}
+<!-- {{< col >}} -->
 <h2>How it works</h2>
 <ol>
   <li><strong>Leader</strong>(s) are chosen <strong>dynamically</strong> based on resource availability;</li>
@@ -355,9 +348,9 @@ the _self-organizing coordination regions_ (SCR)<small>[4]</small> pattern.
   <li class="fragment" data-fragment-index="3">Leaders <strong>distribute resources</strong> based on node performance;</li>
   <li class="fragment" data-fragment-index="4">Nodes <strong>act based on resources and success</strong>, spawning new nodes or self-destructing.</li>
 </ol>
-{{</ col >}}
+<!-- {{</ col >}} -->
 
-{{< col >}}
+<!-- {{< col >}} -->
 <h3 class="fragment" data-fragment-index="5"> Supported features</h3>
 
 <ul>
@@ -369,9 +362,9 @@ the _self-organizing coordination regions_ (SCR)<small>[4]</small> pattern.
 {{% frag c="- **Multiple leaders**: allowing easier management of large network by splitting them in sub-systems;" %}}
 {{% frag c="- **Growth and shrink**: different implementations of _spawning/destroying_ strategies can lead to different structures;" %}}
 {{% frag c="- **Merge and split**: inherits _self-organizing_ capabilities from AC, thus supports network segmentation or merging." %}} -->
-{{</ col >}}
+<!-- {{</ col >}} -->
 
-{{</ multicol >}}
+<!-- {{</ multicol >}} -->
 
 
 ---
@@ -541,9 +534,8 @@ The approach enables to express morphogenetic algorithm by a **macroscopic persp
 Possible **future directions**:
 
 - Inspect more **dynamics** and **complex organizational scenarios**;
-- Development of a **software library** of _aggregate morphogenetic blocks_;
 - Investigate the system response to **continuous perturbations**;
-- Apply this approach to **real-world scenarios**.
+- Development of a **software library** of _aggregate morphogenetic blocks_.
 
 ---
 
