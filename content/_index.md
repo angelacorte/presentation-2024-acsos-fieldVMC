@@ -347,7 +347,7 @@ the _self-organizing coordination regions_ (SCR)<small>[4]</small> pattern.
 {{< multicol >}}
 
 {{< col >}}
-<h2>Functioning</h2>
+<h2>How it works</h2>
 <ol>
   <li><strong>Leader</strong>(s) are chosen <strong>dynamically</strong> based on resource availability;</li>
   <li class="fragment" data-fragment-index="1">A <strong>gradient field</strong> defines zones around each leader, organized by distance to their nearest leader;</li>
@@ -481,7 +481,7 @@ Merging of two different structures into a single one.
 {{< multicol >}}
 {{< col >}}
 <div class="r-stack">
-<img src="images/graftWithIndex.gif" alt="One root sequence">
+<img src="images/graftWithMoreLeadersWithIndex.gif" alt="More leaders sequence">
   <img
     class="fragment current-visible"
     src="images/graftWithMoreLeaders38.png"
@@ -495,16 +495,6 @@ Merging of two different structures into a single one.
 ## Self-Segmentation
 
 Multiple independent subsystems from a single one.
-
-<!-- Starts from two non-communicating systems **without** spawn and destroy policies. -->
-
-<!-- The influence radius of a leader is reduced, -->
-<!-- in a way each system **elects more than one leader**, -->
-<!-- therefore **dividing itself into subregions**. -->
-
-<!-- After their stabilization, -->
-<!-- the two systems are merged, -->
-<!-- and the subregions change based on their potential new leaders. -->
 
 {{%/ col %}}
 
