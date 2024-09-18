@@ -543,3 +543,6 @@ Possible **future directions**:
 ## Reproducible experiments here!
 
 <img src="images/vmc-qr.svg" alt="Examples repo">
+<div style="text-align: center;">
+<p><i class="fab fa-github mr-3" style="color: #22373b;"></i><a href="https://github.com/angelacorte/vmc-experiments">angelacorte/vmc-experiments</a></p>
+</div>
